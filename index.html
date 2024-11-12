@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ометьевский Парк</title>
+    <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="sass/style.css" />
+  </head>
+
+  <body>
+
+<!-- ГЛАВНЫЙ БЛОК С ШАПКОЙ -->
+    <div class="main">
+      <div class="container">
+        <header class="header">
+          <div class="header__content">
+            <div class="header__logo">
+              <a href="#">
+                <img src="img/logo.svg" alt="ЖК Ометьевский Парк" />
+              </a>
+            </div>
+            <div class="header__contact">
+              <a href="tel:+79872972228" class="header__phone">
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.7126 13.2102L15.2007 10.6982C14.3035 9.80111 12.7784 10.16 12.4196 11.3262C12.1504 12.1337 11.2533 12.5822 10.4459 12.4028C8.65165 11.9542 6.22941 9.62168 5.78084 7.73772C5.51171 6.93027 6.04998 6.03314 6.8574 5.76404C8.02366 5.40519 8.38251 3.88007 7.48538 2.98295L4.97343 0.470991C4.25573 -0.156997 3.17918 -0.156997 2.55119 0.470991L0.846649 2.17553C-0.857891 3.96978 1.02607 8.72455 5.24257 12.941C9.45906 17.1575 14.2138 19.1313 16.0081 17.337L17.7126 15.6324C18.3406 14.9147 18.3406 13.8382 17.7126 13.2102Z"
+                    fill="#FFCA56"
+                  />
+                </svg>+7 987 297 22 28
+              </a>
+        
+              <button class="btn call-button" data-modal="#modal-form">
+                <span>Заказать звонок</span>
+                <svg
+                  width="55"
+                  height="55"
+                  viewBox="0 0 55 55"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="27.5088" cy="27.0741" r="26.9712" fill="#FFCA56" />
+                  <path
+                    d="M36.2213 27.7812C36.6118 27.3907 36.6118 26.7575 36.2213 26.367L29.8573 20.003C29.4668 19.6125 28.8336 19.6125 28.4431 20.003C28.0526 20.3936 28.0526 21.0267 28.4431 21.4172L34.0999 27.0741L28.4431 32.731C28.0526 33.1215 28.0526 33.7546 28.4431 34.1452C28.8336 34.5357 29.4668 34.5357 29.8573 34.1452L36.2213 27.7812ZM19.5034 28.0741H35.5142V26.0741H19.5034V28.0741Z"
+                    fill="#191816"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="header__burger" id="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="header__socials d-block-768">
+              <a class="header__socials-whatsapp" href="whatsapp://send?phone=79872972228/" target="_blank">
+                <img
+                  alt="вотсап"
+                  loading="lazy"
+                  width="29"
+                  height="29"
+                  decoding="async"
+                  data-nimg="1"
+                  src="img/whatsap.svg"
+                  style="color: transparent"
+                />
+              </a>
+              <a class="header__socials-telegram" href="https://t.me/79872972228" target="_blank">
+                <img
+                  loading="lazy"
+                  width="29"
+                  height="29"
+                  decoding="async"
+                  data-nimg="1"
+                  src="img/telegr.svg"
+                  style="color: transparent"
+                />
+              </a>
+              <a class="header__socials-vk" href="https://vk.com/club225952146" target="_blank">
+                <img
+                  alt="вк"
+                  loading="lazy"
+                  width="29"
+                  height="29"
+                  decoding="async"
+                  data-nimg="1"
+                  src="img/vk.svg"
+                  style="color: transparent"
+                />
+              </a>
+            </div>
+          </div>
+          <svg
+            viewBox="0 0 1401 1"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.602417 0.58728H1400.6"
+              stroke="#EBEBEB"
+              stroke-opacity="0.5"
+              stroke-width="0.5"
+              stroke-linecap="round"
+              stroke-dasharray="1 1"
+            />
+          </svg>
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li><a href="#project">О проекте</a></li>
+              <li><a href="#choice">Выбрать квартиру</a></li>
+              <li><a href="#infrastructure">Расположение и инфраструктура</a></li>
+              <li><a href="#ipoteka">Ипотека</a></li>
+              <li><a href="#step">Ход строительсва</a></li>
+              <li><a href="#footer">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="d-flex"><a href="tel:+79872972228" class="header__phone ">
+            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.7126 13.2102L15.2007 10.6982C14.3035 9.80111 12.7784 10.16 12.4196 11.3262C12.1504 12.1337 11.2533 12.5822 10.4459 12.4028C8.65165 11.9542 6.22941 9.62168 5.78084 7.73772C5.51171 6.93027 6.04998 6.03314 6.8574 5.76404C8.02366 5.40519 8.38251 3.88007 7.48538 2.98295L4.97343 0.470991C4.25573 -0.156997 3.17918 -0.156997 2.55119 0.470991L0.846649 2.17553C-0.857891 3.96978 1.02607 8.72455 5.24257 12.941C9.45906 17.1575 14.2138 19.1313 16.0081 17.337L17.7126 15.6324C18.3406 14.9147 18.3406 13.8382 17.7126 13.2102Z"
+                fill="#FFCA56"
+              />
+            </svg>+7 987 297 22 28
+          </a>
+          <div class="header__socials">
+            <a class="header__socials-whatsapp" href="whatsapp://send?phone=79872972228/" target="_blank">
+              <img
+                alt="вотсап"
+                loading="lazy"
+                width="29"
+                height="29"
+                decoding="async"
+                data-nimg="1"
+                src="img/whatsap.svg"
+                style="color: transparent"
+              />
+            </a>
+            <a class="header__socials-telegram" href="https://t.me/79872972228" target="_blank">
+              <img
+                loading="lazy"
+                width="29"
+                height="29"
+                decoding="async"
+                data-nimg="1"
+                src="img/telegr.svg"
+                style="color: transparent"
+              />
+            </a>
+            <a class="header__socials-vk" href="https://vk.com/club225952146" target="_blank">
+              <img
+                alt="вк"
+                loading="lazy"
+                width="29"
+                height="29"
+                decoding="async"
+                data-nimg="1"
+                src="img/vk.svg"
+                style="color: transparent"
+              />
+            </a>
+          </div>
+
+</div>
+          
+        </header>
+
+        <div class="main__banner">
+          <h1 class="main__title">Жилищный комплекс «Ометьевский Парк»</h1>
+          <p class="main__address">г. Казань, ул. Родины, д.17</p>
+          <a href="#choice" class="btn call-button big__button">
+            <span>Выбрать квартиру</span>
+            <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="45.4765" cy="45.3752" r="44.6357" fill="#FFCA56" />
+              <path d="M59.432 46.0823C59.8225 45.6918 59.8225 45.0586 59.432 44.6681L53.068 38.3041C52.6775 37.9136 52.0443 37.9136 51.6538 38.3041C51.2633 38.6946 51.2633 39.3278 51.6538 39.7183L57.3106 45.3752L51.6538 51.032C51.2633 51.4226 51.2633 52.0557 51.6538 52.4463C52.0443 52.8368 52.6775 52.8368 53.068 52.4463L59.432 46.0823ZM32.228 46.3752H58.7249V44.3752H32.228V46.3752Z" fill="#191816" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Блок 2   О ПРОЕКТЕ-->
+    <div class="project section" id="project">
+      <div class="container">
+        <div class="project__items">
+          <h2 class="project__title-830">
+            О проекте
+            <svg
+              width="199"
+              height="20"
+              viewBox="0 0 199 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M153.3 9.8988C153.3 6.95328 150.913 4.56547 147.967 4.56547C145.022 4.56547 142.634 6.95328 142.634 9.8988C142.634 12.8443 145.022 15.2321 147.967 15.2321C150.913 15.2321 153.3 12.8443 153.3 9.8988ZM147.967 8.8988L0.749023 8.8988V10.8988L147.967 10.8988V8.8988Z"
+                fill="#FFCA56"
+              />
+              <circle cx="172.33" cy="9.8988" r="9.75" fill="#FFCA56" />
+              <circle cx="194.095" cy="9.89877" r="4.02975" fill="#FFCA56" />
+            </svg>
+          </h2>
+          <div class="project__image">
+            <div class="pict-container">
+              <div class="pict">
+                <span> </span>
+              </div>
+            </div>
+            <div class="project__badge">
+              <span>Срок строительства</span> до 1 кв. 2027
+            </div>
+          </div>
+          <div class="project__content">
+            <h2 class="project__title">
+              О проекте
+              <svg
+                width="199"
+                height="20"
+                viewBox="0 0 199 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M153.3 9.8988C153.3 6.95328 150.913 4.56547 147.967 4.56547C145.022 4.56547 142.634 6.95328 142.634 9.8988C142.634 12.8443 145.022 15.2321 147.967 15.2321C150.913 15.2321 153.3 12.8443 153.3 9.8988ZM147.967 8.8988L0.749023 8.8988V10.8988L147.967 10.8988V8.8988Z"
+                  fill="#FFCA56"
+                />
+                <circle cx="172.33" cy="9.8988" r="9.75" fill="#FFCA56" />
+                <circle cx="194.095" cy="9.89877" r="4.02975" fill="#FFCA56" />
+              </svg>
+            </h2>
+            <p class="project__description">
+              Жилой дом представляет собой <span>здание Г-образной формы</span>.
+              Дом представляет собой
+              <span>5 секционный 9-ти этажный жилой дом</span> с размещением на
+              первом этаже встроенных нежилых помещений общественного
+              назначения, с теплыми чердаками, с подземным техническим
+              этажом.<span>Жилых этажей в секциях -8, общественных – 1</span>.
+            </p>
+            <p class="project__description">
+              Фасады здания решены с учетом стилевых, эстетических и
+              утилитарных. Колористическое решение фасадов выбрано с учетом
+              окружающей застройки. Наружные стены 1-2 этажа выполнены
+              <span>
+                по системе навесного вентилируемого фасада с крупноформатной
+                фибробетонной плиткой</span
+              >, согласно цветовому решению фасадов. Стены внутри лоджий и
+              балконов жилого дома выполнены из силикатного кирпича. Наружные
+              стены 3-9 этажа выполнены по системе навесного вентилируемого
+              фасада, согласно цветовому решению.
+            </p>
+          </div>
+        </div>
+        <div class="project__info">
+          <div class="project__info-item">
+            <span>184</span>
+            <p>квартиры</p>
+          </div>
+          <div class="project__info-item">
+            <span>2,7 м</span>
+            <p>высота потолка</p>
+          </div>
+          <div class="project__info-item">
+            <span>кирпич</span>
+            <p>основной материал</p>
+          </div>
+          <div class="project__info-item">
+            <span>ПВХ</span>
+            <p>стеклопакет</p>
+          </div>
+          <div class="project__info-item">
+            <span>1000 кг</span>
+            <p>лифт</p>
+          </div>
+          <div class="project__info-item">
+            <span>1 этаж</span>
+            <p>колясочная,<br />велосипедная</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Блок 3 ВЫБРАТЬ КВАРТИРУ -->
+<div class="choice section" id="choice">
+
+  <div class="container">
+    <h2 class="infrastructure__title">
+      <svg class="choice-1"
+        width="198"
+        height="20"
+        viewBox="0 0 198 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M46.9379 10.3467C46.9379 7.40116 49.3257 5.01335 52.2712 5.01335C55.2168 5.01335 57.6046 7.40116 57.6046 10.3467C57.6046 13.2922 55.2168 15.68 52.2712 15.68C49.3257 15.68 46.9379 13.2922 46.9379 10.3467ZM52.2712 9.34668L197.376 9.34668V11.3467L52.2712 11.3467V9.34668Z"
+          fill="#FFCA56"
+        />
+        <circle
+          cx="9.75"
+          cy="9.75"
+          r="9.75"
+          transform="matrix(-1 0 0 1 34.5 0)"
+          fill="#FFCA56"
+        />
+        <circle
+          cx="4.02975"
+          cy="4.02975"
+          r="4.02975"
+          transform="matrix(-1 0 0 1 8.05957 6.31689)"
+          fill="#FFCA56"
+        />
+      </svg>
+      Выбрать квартиру
+      <svg class="choice-2"
+      width="198"
+      height="20"
+      viewBox="0 0 198 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M46.9379 10.3467C46.9379 7.40116 49.3257 5.01335 52.2712 5.01335C55.2168 5.01335 57.6046 7.40116 57.6046 10.3467C57.6046 13.2922 55.2168 15.68 52.2712 15.68C49.3257 15.68 46.9379 13.2922 46.9379 10.3467ZM52.2712 9.34668L197.376 9.34668V11.3467L52.2712 11.3467V9.34668Z"
+        fill="#FFCA56"
+      />
+      <circle
+        cx="9.75"
+        cy="9.75"
+        r="9.75"
+        transform="matrix(-1 0 0 1 34.5 0)"
+        fill="#FFCA56"
+      />
+      <circle
+        cx="4.02975"
+        cy="4.02975"
+        r="4.02975"
+        transform="matrix(-1 0 0 1 8.05957 6.31689)"
+        fill="#FFCA56"
+      />
+    </svg>
+      <svg
+        width="199"
+        height="20"
+        viewBox="0 0 199 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M153.3 9.8988C153.3 6.95328 150.913 4.56547 147.967 4.56547C145.022 4.56547 142.634 6.95328 142.634 9.8988C142.634 12.8443 145.022 15.2321 147.967 15.2321C150.913 15.2321 153.3 12.8443 153.3 9.8988ZM147.967 8.8988L0.749023 8.8988V10.8988L147.967 10.8988V8.8988Z"
+          fill="#FFCA56"
+        />
+        <circle cx="172.33" cy="9.8988" r="9.75" fill="#FFCA56" />
+        <circle cx="194.095" cy="9.89877" r="4.02975" fill="#FFCA56" />
+      </svg>
+
+      
+    </h2>
+    <!-- <div class="choice__sheme">
+      <img src="/img/sheme.png">
+    </div> -->
+  </div>
+</div>
+
+
+
+
+
+    <!--Блок 4  ИНФРАСТУКТУРА-->
+    <div class="infrastructure section" id="infrastructure">
+      <div class="container">
+        <h2 class="infrastructure__title">
+          <svg
+            width="198"
+            height="20"
+            viewBox="0 0 198 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M46.9379 10.3467C46.9379 7.40116 49.3257 5.01335 52.2712 5.01335C55.2168 5.01335 57.6046 7.40116 57.6046 10.3467C57.6046 13.2922 55.2168 15.68 52.2712 15.68C49.3257 15.68 46.9379 13.2922 46.9379 10.3467ZM52.2712 9.34668L197.376 9.34668V11.3467L52.2712 11.3467V9.34668Z"
+              fill="#FFCA56"
+            />
+            <circle
+              cx="9.75"
+              cy="9.75"
+              r="9.75"
+              transform="matrix(-1 0 0 1 34.5 0)"
+              fill="#FFCA56"
+            />
+            <circle
+              cx="4.02975"
+              cy="4.02975"
+              r="4.02975"
+              transform="matrix(-1 0 0 1 8.05957 6.31689)"
+              fill="#FFCA56"
+            />
+          </svg>
+          Инфраструктура
+          <svg
+            width="199"
+            height="20"
+            viewBox="0 0 199 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M153.3 9.8988C153.3 6.95328 150.913 4.56547 147.967 4.56547C145.022 4.56547 142.634 6.95328 142.634 9.8988C142.634 12.8443 145.022 15.2321 147.967 15.2321C150.913 15.2321 153.3 12.8443 153.3 9.8988ZM147.967 8.8988L0.749023 8.8988V10.8988L147.967 10.8988V8.8988Z"
+              fill="#FFCA56"
+            />
+            <circle cx="172.33" cy="9.8988" r="9.75" fill="#FFCA56" />
+            <circle cx="194.095" cy="9.89877" r="4.02975" fill="#FFCA56" />
+          </svg>
+        </h2>
+
+        <div class="infrastructure__items">
+          <div class="infrastructure__content">
+            <p class="infrastructure__description">
+              Прекрасный жилой комплекс на первой линии от Горкинского
+              Ометьевского Парка в соседстве с Горкинским лесом. Без
+              преувеличения можно сказать, что это место является центром
+              притяжения молодых активных и успешных людей. Молодых семей, с
+              детьми которым будет приятно соседство с современным парком.
+            </p>
+            <p>
+              Парковая зона выполнена в ультрасовременном дизайне, позволяет
+              реализовать прогулки разного уровня от тихой спокойной с
+              современными и развивающими детскими площадками до занятия
+              активными видами спорта, Вело-лыжные трассы, тренажеры, зона
+              Ворк-аута, Памп-трек.
+            </p>
+
+            <p>
+              Наличие развитой инфраструктура в шаговой доступности новые
+              детские сады и школа. Тихое место, закрытое от основных
+              транспортных развязок в центре мегаполиса. Для передвижения без
+              автомобиля станция метро Горки. В шаговой доступности ТЦ Южный,
+              Ашан, Мегастрой.
+            </p>
+          </div>
+
+          <div class="infrastructure__image">
+            <div class="pict-container">
+              <div class="pict">
+                <span> </span>
+              </div>
+            </div>
+            <div class="infrastructure__badge">
+              <span>Центр мегополиса</span> 1 линия
+            </div>
+          </div>
+        </div>
+        <div class="infrastructure__info">
+          <div class="infrastructure__info-item">
+            <img src="img/1.svg" />
+
+            <p>первая линия Горкинского Парка</p>
+          </div>
+
+          <div class="infrastructure__info-item">
+            <img src="img/2.svg" />
+
+            <p>Детские площадки</p>
+          </div>
+
+          <div class="infrastructure__info-item">
+            <img src="img/3.svg" />
+
+            <p>Вело-лыжные трассы</p>
+          </div>
+
+          <div class="infrastructure__info-item">
+            <img src="img/4.svg" />
+
+            <p>Ворк-аут, Памп-трек</p>
+          </div>
+
+          <div class="infrastructure__info-item">
+            <img src="img/5.svg" />
+
+            <p>Детский сад и школа</p>
+          </div>
+
+          <div class="infrastructure__info-item">
+            <img src="img/6.svg" />
+
+            <p>Инфраструктура рядом</p>
+          </div>
+
+          <div class="infrastructure__info-item">
+            <img src="img/7.svg" />
+
+            <p>Безопасность</p>
+          </div>
+
+          <div class="infrastructure__info-item">
+            <img src="img/8.svg" />
+
+            <p>В центре</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--5 Блок ФОРМА ОБР СВЯЗИ-->
+    <div class="consultation section" id="consultation">
+      <div class="container">
+        <h3 class="consultation__title">
+          Планируете купить квартиру в 2024 году?
+          <svg
+            width="199"
+            height="20"
+            viewBox="0 0 199 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M153.3 9.8988C153.3 6.95328 150.913 4.56547 147.967 4.56547C145.022 4.56547 142.634 6.95328 142.634 9.8988C142.634 12.8443 145.022 15.2321 147.967 15.2321C150.913 15.2321 153.3 12.8443 153.3 9.8988ZM147.967 8.8988L0.749023 8.8988V10.8988L147.967 10.8988V8.8988Z"
+              fill="#FFCA56"
+            />
+            <circle cx="172.33" cy="9.8988" r="9.75" fill="#FFCA56" />
+            <circle cx="194.095" cy="9.89877" r="4.02975" fill="#FFCA56" />
+          </svg>
+        </h3>
+        <p class="consultation__subtitle">
+          Просто оставьте свои контакты и наш менеджер свяжется с вами
+        </p>
+        <form class="form" id="form" action="#" method="POST" name="feedback">
+        <div class="input">
+          <div class="input__item">
+          <input
+          name="username"
+            type="text"
+            class="input__name" id="name"
+            placeholder="Ваше имя"
+            required=""
+          />
+          <span class="error"></span>
+
+        </div>
+          <div class="input__item">
+          <input
+          name="userphone"
+            type="tel"
+            class="input__phone" id="phone"
+            placeholder="Ваш телефон"
+            required=""
+          />
+          <span class="error"></span>
+          </div>
+          <button class="btn call-button big__button " id="btn">
+            <span>Выбрать квартиру</span>
+            <svg
+              width="90"
+              height="90"
+              viewBox="0 0 55 55"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="27.5088"
+                cy="27.0741"
+                r="26.9712"
+                fill="#FFCA56"
+              />
+              <path
+                d="M36.2213 27.7812C36.6118 27.3907 36.6118 26.7575 36.2213 26.367L29.8573 20.003C29.4668 19.6125 28.8336 19.6125 28.4431 20.003C28.0526 20.3936 28.0526 21.0267 28.4431 21.4172L34.0999 27.0741L28.4431 32.731C28.0526 33.1215 28.0526 33.7546 28.4431 34.1452C28.8336 34.5357 29.4668 34.5357 29.8573 34.1452L36.2213 27.7812ZM19.5034 28.0741H35.5142V26.0741H19.5034V28.0741Z"
+                fill="#191816"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="footer__feedback_policy feedback-form-policy">
+          <input type="checkbox" name="policy" id="policy" checked required/>
+          <label for="policy"><p> Нажимая на кнопку, вы соглашаетесь с  <a href="#"> политикой обработки персональных данных</a></p>
+            </label>
+          <span class="error"></span>
+        </div>
+      </form>
+
+      </div>
+    </div>
+
+
+
+<!--БЛОК  РАСПОЛОЖЕНИЕ -->
+    <div class="location section" id="location">
+      <div class="container">
+        <h2 class="infrastructure__title">
+          <svg
+            width="198"
+            height="20"
+            viewBox="0 0 198 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M46.9379 10.3467C46.9379 7.40116 49.3257 5.01335 52.2712 5.01335C55.2168 5.01335 57.6046 7.40116 57.6046 10.3467C57.6046 13.2922 55.2168 15.68 52.2712 15.68C49.3257 15.68 46.9379 13.2922 46.9379 10.3467ZM52.2712 9.34668L197.376 9.34668V11.3467L52.2712 11.3467V9.34668Z"
+              fill="#FFCA56"
+            />
+            <circle
+              cx="9.75"
+              cy="9.75"
+              r="9.75"
+              transform="matrix(-1 0 0 1 34.5 0)"
+              fill="#FFCA56"
+            />
+            <circle
+              cx="4.02975"
+              cy="4.02975"
+              r="4.02975"
+              transform="matrix(-1 0 0 1 8.05957 6.31689)"
+              fill="#FFCA56"
+            />
+          </svg>
+          Расположение
+          <svg
+            width="199"
+            height="20"
+            viewBox="0 0 199 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M153.3 9.8988C153.3 6.95328 150.913 4.56547 147.967 4.56547C145.022 4.56547 142.634 6.95328 142.634 9.8988C142.634 12.8443 145.022 15.2321 147.967 15.2321C150.913 15.2321 153.3 12.8443 153.3 9.8988ZM147.967 8.8988L0.749023 8.8988V10.8988L147.967 10.8988V8.8988Z"
+              fill="#FFCA56"
+            />
+            <circle cx="172.33" cy="9.8988" r="9.75" fill="#FFCA56" />
+            <circle cx="194.095" cy="9.89877" r="4.02975" fill="#FFCA56" />
+          </svg>
+        </h2>
+        <div class="features">
+          <div class="feature-item">
+            <div class="features__img">
+              <img src="img/metro.jpg" alt="Доступ к Метро" />
+              <div class="feature-content">
+                <h3>Доступ к Метро</h3>
+              </div>
+            </div>
+            <p>
+              Только 10 минут до станций метро Максидом и ТЦ Южный. Быстрый и
+              легкий доступ к центру города и за его пределами.
+            </p>
+          </div>
+
+          <div class="feature-item">
+            <div class="features__img">
+              <img src="img/nature.jpg" alt="Доступ к Метро" />
+              <div class="feature-content">
+                <h3>Природа у Ваших Дверей</h3>
+              </div>
+            </div>
+            <p>
+              Лес Ометьевский находится всего в 2 минутах ходьбы. Убегайте от
+              суеты городской жизни и соединяйтесь с природой.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="features__img">
+              <img src="img/shopping.jpg" alt="Доступ к Метро" />
+              <div class="feature-content">
+                <h3>Шопинг и Развлечения</h3>
+              </div>
+            </div>
+            <p>
+              Только 10 минут до одного из крупнейших торговых центров города -
+              ТЦ Южный Мегостррй. Наслаждайтесь широким выбором магазинов,
+              ресторанов и развлекательных заведений.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="features__img">
+              <img src="img/transport.jpg" alt="Доступ к Метро" />
+              <div class="feature-content">
+                <h3>Общественный Транспорт</h3>
+              </div>
+            </div>
+            <p>
+              Множество остановок общественного транспорта в 5 минутах ходьбы.
+              Легкий доступ к автобусам и трамваям, делая перемещение по городу
+              простым и удобным.
+            </p>
+          </div>
+        </div>
+
+        <div style="position: relative; overflow: hidden">
+          <a
+            href="https://yandex.by/maps/43/kazan/search/%D0%96%D0%9A%20%D0%9E%D0%BC%D0%B5%D1%82%D1%8C%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B0%D1%80%D0%BA/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+            >ЖК Ометьевский парк в Казани</a>
+          <a
+            href="https://yandex.by/maps/43/kazan/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+            >Казань</a
+          ><iframe
+            src="https://yandex.by/map-widget/v1/?ll=49.205087%2C55.762903&mode=search&sctx=ZAAAAAgCEAAaKAoSCRO3CmKgmUhAEXGOOjqu4ktAEhIJuFhRg2kYjj8Ri2zn%2B6nxcj8iBgABAgMEBSgKOABAjJ0GSAFqAnVhnQHNzMw9oAEAqAEAvQGB9sdRwgFNvMj7ibME%2BZrvzb0D582rzM4D%2FYme5MIGlI2u8IID77rSkbsBrdrdjUWijKz18AH3q8a1%2FAHR3%2FP9wgaFy%2Fvklgad6fiT5QSU8c35kQeCAiTQltCaINCe0LzQtdGC0YzQtdCy0YHQutC40Lkg0L%2FQsNGA0LqKAgs2NDk2MDE3MTE2OZICAjQzmgIMZGVza3RvcC1tYXBzqgJiNDIzMTQ5MDUyOSwxNzQ2NjAwNjU0MDgsMTE2OTg4MjYwOTM3LDE3NTcxMTQzMDcyMSwyMjMwMDY1MTA1NCwxNTY2NDAxMzI1MDksOTE0MzgwMzY1MjEsODc4NzM2Mjk3NTM%3D&sll=49.205087%2C55.762903&sspn=0.007985%2C0.002513&text=%D0%96%D0%9A%20%D0%9E%D0%BC%D0%B5%D1%82%D1%8C%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B0%D1%80%D0%BA&z=18.48"
+            width="100%"
+            height="650"
+            frameborder="1"
+            allowfullscreen="true"
+            style="position: relative"
+          ></iframe>
+        </div>
+        <div class="info">
+          <h3>ЖК Ометьевский парк  <svg
+            width="199"
+            height="20"
+            viewBox="0 0 199 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M153.3 9.8988C153.3 6.95328 150.913 4.56547 147.967 4.56547C145.022 4.56547 142.634 6.95328 142.634 9.8988C142.634 12.8443 145.022 15.2321 147.967 15.2321C150.913 15.2321 153.3 12.8443 153.3 9.8988ZM147.967 8.8988L0.749023 8.8988V10.8988L147.967 10.8988V8.8988Z"
+              fill="#FFCA56"
+            />
+            <circle cx="172.33" cy="9.8988" r="9.75" fill="#FFCA56" />
+            <circle cx="194.095" cy="9.89877" r="4.02975" fill="#FFCA56" />
+          </svg></h3>
+          <div class="info__item">
+            <span class="icon"><svg width="22" height="29" viewBox="0 0 22 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.9022 0.0878906C8.10991 0.0917016 5.43303 1.23107 3.45857 3.25616C1.48411 5.28125 0.373222 8.02677 0.369507 10.8907C0.369507 18.6462 10.1825 28.3597 10.5994 28.7693C10.6805 28.8501 10.7891 28.8953 10.9022 28.8953C11.0153 28.8953 11.1239 28.8501 11.205 28.7693C11.622 28.3597 21.4349 18.6462 21.4349 10.8907C21.4312 8.02677 20.3203 5.28125 18.3459 3.25616C16.3714 1.23107 13.6945 0.0917016 10.9022 0.0878906ZM10.9022 15.842C9.94743 15.842 9.01409 15.5516 8.22021 15.0075C7.42633 14.4635 6.80758 13.6902 6.4422 12.7854C6.07682 11.8807 5.98122 10.8852 6.16749 9.92473C6.35376 8.96428 6.81353 8.08204 7.48867 7.38959C8.16381 6.69715 9.02398 6.22558 9.96042 6.03454C10.8969 5.84349 11.8675 5.94154 12.7496 6.31629C13.6317 6.69104 14.3857 7.32566 14.9161 8.13989C15.4466 8.95413 15.7297 9.91141 15.7297 10.8907C15.7289 12.2036 15.22 13.4625 14.3149 14.3908C13.4097 15.3192 12.1823 15.8411 10.9022 15.842Z" fill="#FFCA56" />
+            </svg></span>
+            Республика Татарстан, Казань, улица Родины, 17
+          </div>
+          <div class="info__item">
+            <span class="icon"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.9665 17.8074L20.6172 14.4582C19.421 13.262 17.3876 13.7405 16.9091 15.2955C16.5502 16.3721 15.3541 16.9702 14.2775 16.7309C11.8852 16.1328 8.65553 13.0228 8.05744 10.5108C7.69859 9.4342 8.41629 8.23803 9.49284 7.87923C11.0479 7.40076 11.5263 5.36728 10.3302 4.17111L6.98089 0.821836C6.02396 -0.0154818 4.58855 -0.0154818 3.75124 0.821836L1.47852 3.09456C-0.794204 5.48689 1.71775 11.8266 7.33974 17.4486C12.9617 23.0706 19.3014 25.7022 21.6938 23.3098L23.9665 21.0371C24.8038 20.0801 24.8038 18.6447 23.9665 17.8074Z" fill="#FFCA56" />
+            </svg></span>
+          <a href="tel:+79872972228">+7 987 297 22 28</a>  
+          </div>
+
+
+          <div class="info__flex">
+          <div class="info__items">      
+            <div class="info__item">
+            <span class="icon"> <svg width="29" height="35" viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.5 0C7.25 0 0 0.90625 0 7.25V24.4688C0 26.1906 0.68875 27.7494 1.8125 28.8913V31.7188C1.8125 33.2231 3.02688 34.4375 4.53125 34.4375C6.03562 34.4375 7.25 33.2231 7.25 31.7188V30.8125H21.75V31.7188C21.75 33.205 22.9644 34.4375 24.4688 34.4375C25.955 34.4375 27.1875 33.2231 27.1875 31.7188V28.8913C28.3112 27.7494 29 26.1906 29 24.4688V7.25C29 0.90625 22.5113 0 14.5 0ZM8.15625 25.375C6.65188 25.375 5.4375 24.1606 5.4375 22.6562C5.4375 21.1519 6.65188 19.9375 8.15625 19.9375C9.66062 19.9375 10.875 21.1519 10.875 22.6562C10.875 24.1606 9.66062 25.375 8.15625 25.375ZM20.8438 25.375C19.3394 25.375 18.125 24.1606 18.125 22.6562C18.125 21.1519 19.3394 19.9375 20.8438 19.9375C22.3481 19.9375 23.5625 21.1519 23.5625 22.6562C23.5625 24.1606 22.3481 25.375 20.8438 25.375ZM25.375 14.5H3.625V9.0625H25.375V14.5Z" fill="#FFCA56" />
+            </svg></span>
+          <p>Горки <strong>1,05 км</strong></p>
+          </div>
+
+          <div class="info__item">
+            <span class="icon"> <svg width="29" height="35" viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.5 0C7.25 0 0 0.90625 0 7.25V24.4688C0 26.1906 0.68875 27.7494 1.8125 28.8913V31.7188C1.8125 33.2231 3.02688 34.4375 4.53125 34.4375C6.03562 34.4375 7.25 33.2231 7.25 31.7188V30.8125H21.75V31.7188C21.75 33.205 22.9644 34.4375 24.4688 34.4375C25.955 34.4375 27.1875 33.2231 27.1875 31.7188V28.8913C28.3112 27.7494 29 26.1906 29 24.4688V7.25C29 0.90625 22.5113 0 14.5 0ZM8.15625 25.375C6.65188 25.375 5.4375 24.1606 5.4375 22.6562C5.4375 21.1519 6.65188 19.9375 8.15625 19.9375C9.66062 19.9375 10.875 21.1519 10.875 22.6562C10.875 24.1606 9.66062 25.375 8.15625 25.375ZM20.8438 25.375C19.3394 25.375 18.125 24.1606 18.125 22.6562C18.125 21.1519 19.3394 19.9375 20.8438 19.9375C22.3481 19.9375 23.5625 21.1519 23.5625 22.6562C23.5625 24.1606 22.3481 25.375 20.8438 25.375ZM25.375 14.5H3.625V9.0625H25.375V14.5Z" fill="#FFCA56" />
+            </svg></span>
+          <p>Проспект Победы <strong>1,87 км</strong></p>
+          </div>
+
+          <div class="info__item">
+            <span class="icon"> <svg width="29" height="35" viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.5 0C7.25 0 0 0.90625 0 7.25V24.4688C0 26.1906 0.68875 27.7494 1.8125 28.8913V31.7188C1.8125 33.2231 3.02688 34.4375 4.53125 34.4375C6.03562 34.4375 7.25 33.2231 7.25 31.7188V30.8125H21.75V31.7188C21.75 33.205 22.9644 34.4375 24.4688 34.4375C25.955 34.4375 27.1875 33.2231 27.1875 31.7188V28.8913C28.3112 27.7494 29 26.1906 29 24.4688V7.25C29 0.90625 22.5113 0 14.5 0ZM8.15625 25.375C6.65188 25.375 5.4375 24.1606 5.4375 22.6562C5.4375 21.1519 6.65188 19.9375 8.15625 19.9375C9.66062 19.9375 10.875 21.1519 10.875 22.6562C10.875 24.1606 9.66062 25.375 8.15625 25.375ZM20.8438 25.375C19.3394 25.375 18.125 24.1606 18.125 22.6562C18.125 21.1519 19.3394 19.9375 20.8438 19.9375C22.3481 19.9375 23.5625 21.1519 23.5625 22.6562C23.5625 24.1606 22.3481 25.375 20.8438 25.375ZM25.375 14.5H3.625V9.0625H25.375V14.5Z" fill="#FFCA56" />
+            </svg></span>
+          <p>Аметьево <strong>2,65 км</strong></p>
+          </div></div>
+          <div class="buttons">
+            <button class="call-button btn-notbg">Как добраться</button>
+            <button class="btn call-button">
+              <span>Об организации</span>
+              <svg
+                width="55"
+                height="55"
+                viewBox="0 0 55 55"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="27.5088"
+                  cy="27.0741"
+                  r="26.9712"
+                  fill="#FFCA56"
+                />
+                <path
+                  d="M36.2213 27.7812C36.6118 27.3907 36.6118 26.7575 36.2213 26.367L29.8573 20.003C29.4668 19.6125 28.8336 19.6125 28.4431 20.003C28.0526 20.3936 28.0526 21.0267 28.4431 21.4172L34.0999 27.0741L28.4431 32.731C28.0526 33.1215 28.0526 33.7546 28.4431 34.1452C28.8336 34.5357 29.4668 34.5357 29.8573 34.1452L36.2213 27.7812ZM19.5034 28.0741H35.5142V26.0741H19.5034V28.0741Z"
+                  fill="#191816"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="tour-block">
+          <span class="tour-title">3D тур</span>
+          <a href="https://kazan.gid360.ru/panorama/centr/ooogran" class="tour-link" target="_blank">
+            kazan.gid360.ru/panorama/centr/ooogran
+          </a>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- БЛОК ИПОТЕКА -->
+<div class="ipoteka section" id="ipoteka">
+  <div class="container">
+    <h2 class="infrastructure__title">
+      <svg
+        width="198"
+        height="20"
+        viewBox="0 0 198 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M46.9379 10.3467C46.9379 7.40116 49.3257 5.01335 52.2712 5.01335C55.2168 5.01335 57.6046 7.40116 57.6046 10.3467C57.6046 13.2922 55.2168 15.68 52.2712 15.68C49.3257 15.68 46.9379 13.2922 46.9379 10.3467ZM52.2712 9.34668L197.376 9.34668V11.3467L52.2712 11.3467V9.34668Z"
+          fill="#FFCA56"
+        />
+        <circle
+          cx="9.75"
+          cy="9.75"
+          r="9.75"
+          transform="matrix(-1 0 0 1 34.5 0)"
+          fill="#FFCA56"
+        />
+        <circle
+          cx="4.02975"
+          cy="4.02975"
+          r="4.02975"
+          transform="matrix(-1 0 0 1 8.05957 6.31689)"
+          fill="#FFCA56"
+        />
+      </svg>
+      Ипотека
+      <svg
+        width="199"
+        height="20"
+        viewBox="0 0 199 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M153.3 9.8988C153.3 6.95328 150.913 4.56547 147.967 4.56547C145.022 4.56547 142.634 6.95328 142.634 9.8988C142.634 12.8443 145.022 15.2321 147.967 15.2321C150.913 15.2321 153.3 12.8443 153.3 9.8988ZM147.967 8.8988L0.749023 8.8988V10.8988L147.967 10.8988V8.8988Z"
+          fill="#FFCA56"
+        />
+        <circle cx="172.33" cy="9.8988" r="9.75" fill="#FFCA56" />
+        <circle cx="194.095" cy="9.89877" r="4.02975" fill="#FFCA56" />
+      </svg>
+    </h2>
+    <div class="ipoteka__items">
+<a href="#" class="ipoteka__item">
+  <img src="img/ipoteka-1.png">
+</a>
+
+<a href="#" class="ipoteka__item">
+  <img src="img/ipoteka-2.png">
+</a>
+<a href="#" class="ipoteka__item">
+  <img src="img/ipoteka-3.png">
+</a>
+<a href="#" class="ipoteka__item">
+  <img src="img/ipoteka-4.png">
+</a>
+    </div>
+
+    <p>Получите ипотеку на выгодных условиях от наших партнеров - ведущих банков России.
+      Мы поможем вам выбрать лучшее предложение для вашей семьи.</p>
+  </div>
+</div>
+
+
+<!-- БЛОК ГАЛЕРЕЯ -->
+
+<div class="gallery section" id="gallery">
+  <div class="container">
+    <h2 class="infrastructure__title">
+      <svg
+        width="198"
+        height="20"
+        viewBox="0 0 198 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M46.9379 10.3467C46.9379 7.40116 49.3257 5.01335 52.2712 5.01335C55.2168 5.01335 57.6046 7.40116 57.6046 10.3467C57.6046 13.2922 55.2168 15.68 52.2712 15.68C49.3257 15.68 46.9379 13.2922 46.9379 10.3467ZM52.2712 9.34668L197.376 9.34668V11.3467L52.2712 11.3467V9.34668Z"
+          fill="#FFCA56"
+        />
+        <circle
+          cx="9.75"
+          cy="9.75"
+          r="9.75"
+          transform="matrix(-1 0 0 1 34.5 0)"
+          fill="#FFCA56"
+        />
+        <circle
+          cx="4.02975"
+          cy="4.02975"
+          r="4.02975"
+          transform="matrix(-1 0 0 1 8.05957 6.31689)"
+          fill="#FFCA56"
+        />
+      </svg> Галерея <svg
+        width="199"
+        height="20"
+        viewBox="0 0 199 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M153.3 9.8988C153.3 6.95328 150.913 4.56547 147.967 4.56547C145.022 4.56547 142.634 6.95328 142.634 9.8988C142.634 12.8443 145.022 15.2321 147.967 15.2321C150.913 15.2321 153.3 12.8443 153.3 9.8988ZM147.967 8.8988L0.749023 8.8988V10.8988L147.967 10.8988V8.8988Z"
+          fill="#FFCA56"
+        />
+        <circle cx="172.33" cy="9.8988" r="9.75" fill="#FFCA56" />
+        <circle cx="194.095" cy="9.89877" r="4.02975" fill="#FFCA56" />
+      </svg>
+    </h2>
+
+
+
+    <div class="swiper">
+      <div class="swiper-wrapper"  id="lg-swipper">
+ 
+            <div class="swiper-slide"><img src="img/shopping.jpg"/></div>
+            <div class="swiper-slide"><img src="img/step-img.jpg"/></div>
+            <div class="swiper-slide"><img src="img/transport.jpg"/></div>
+            <div class="swiper-slide"><img src="img/metro.jpg"/></div>
+          
+
+      </div>
+ 
+    </div>
+
+    <div class="swiper-nav">    <div class="swiper-button-prev  swiper-button-prev1"></div>
+    <div class="swiper-pagination swiper-pagination1"></div>
+    <div class="swiper-button-next swiper-button-next1"></div></div>
+
+  
+  
+  </div>
+</div>
+
+
+
+<!-- БЛОК ХОД СТРОИТЕЛЬСТВА -->
+<div class="step section" id="step">
+  <div class="container">
+    <h2 class="infrastructure__title">
+      <svg
+        width="198"
+        height="20"
+        viewBox="0 0 198 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M46.9379 10.3467C46.9379 7.40116 49.3257 5.01335 52.2712 5.01335C55.2168 5.01335 57.6046 7.40116 57.6046 10.3467C57.6046 13.2922 55.2168 15.68 52.2712 15.68C49.3257 15.68 46.9379 13.2922 46.9379 10.3467ZM52.2712 9.34668L197.376 9.34668V11.3467L52.2712 11.3467V9.34668Z"
+          fill="#FFCA56"
+        />
+        <circle
+          cx="9.75"
+          cy="9.75"
+          r="9.75"
+          transform="matrix(-1 0 0 1 34.5 0)"
+          fill="#FFCA56"
+        />
+        <circle
+          cx="4.02975"
+          cy="4.02975"
+          r="4.02975"
+          transform="matrix(-1 0 0 1 8.05957 6.31689)"
+          fill="#FFCA56"
+        />
+      </svg> Ход строительства <svg
+        width="199"
+        height="20"
+        viewBox="0 0 199 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M153.3 9.8988C153.3 6.95328 150.913 4.56547 147.967 4.56547C145.022 4.56547 142.634 6.95328 142.634 9.8988C142.634 12.8443 145.022 15.2321 147.967 15.2321C150.913 15.2321 153.3 12.8443 153.3 9.8988ZM147.967 8.8988L0.749023 8.8988V10.8988L147.967 10.8988V8.8988Z"
+          fill="#FFCA56"
+        />
+        <circle cx="172.33" cy="9.8988" r="9.75" fill="#FFCA56" />
+        <circle cx="194.095" cy="9.89877" r="4.02975" fill="#FFCA56" />
+      </svg>
+    </h2>
+
+
+    <div class="tabs2 tabs__tab-list">
+      <button data-year="2024" class=" tabs__trigger active">2024 год</button>
+      <button data-year="2025" class="tabs__trigger">2025 год</button>
+      <button data-year="2027" class="tabs__trigger">2027 год</button>
+    </div>
+    
+    <div class="slider-container">
+      <div class="swiper2">
+        <div class="swiper-wrapper">
+          <!-- Слайды будут добавлены динамически через JavaScript -->
+        </div>
+        <!-- Пагинация и кнопки навигации для слайдера -->
+        <div class="swip-nav">  
+          <div class="swiper-button-prev swiper-button-prev2"></div>
+          <div class=" swiper-pagination swiper-pagination2"></div>
+          <div class="swiper-button-next swiper-button-next2"></div>
+      </div>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- БЛОК ПОДВАЛ -->
+<footer class="section" id="footer">
+  <div class="container">
+    <div class="footer">
+      <div class="footer__logo">
+<a href="#">
+<img src="img/logo.svg">
+</a>
+<p><strong>Срок передачи:</strong>
+  3 кв 2027 года
+</p>
+</div>
+
+<div class="footer__info">
+<p><strong>
+  Застройщик:
+</strong>
+ООО Специализированный застройщик  «ГК Реновация»</p>
+<div class="footer__info-link">
+  <p>
+  <strong>
+  Проектная декларация:
+</strong>
+</p>
+<a href="https://xn--80az8a.xn--d1aqf.xn--p1ai/">наш.дом.рф</a>
+</div>
+</div>
+
+<div class="footer__soc">
+<div class="footer__soc-item footer__soc-tel">
+  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.834 14.091L15.322 11.5791C14.4249 10.682 12.8998 11.0409 12.5409 12.2071C12.2718 13.0145 11.3747 13.4631 10.5672 13.2836C8.77299 12.8351 6.35075 10.5025 5.90218 8.61857C5.63304 7.81113 6.17132 6.914 6.97873 6.6449C8.145 6.28605 8.50385 4.76093 7.60672 3.8638L5.09477 1.35185C4.37707 0.723862 3.30052 0.723862 2.67253 1.35185L0.967987 3.05639C-0.736553 4.85064 1.14741 9.60541 5.36391 13.8219C9.5804 18.0384 14.3352 20.0121 16.1294 18.2178L17.834 16.5133C18.462 15.7956 18.462 14.719 17.834 14.091Z" fill="#FFCA56" />
+  </svg>
+  <a href="tel:+79872972228">+7 987 297 22 28</a>
+
+</div>
+
+<div class="footer__soc-item">
+  <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11.7529 10.211C11.2802 10.5261 10.7311 10.6927 10.165 10.6927C9.59897 10.6927 9.0499 10.5261 8.5772 10.211L0.791545 5.0204C0.748565 4.99166 0.706381 4.96175 0.665039 4.9307L0.665039 13.4361C0.665039 14.4112 1.4564 15.1851 2.41412 15.1851H17.9159C18.8911 15.1851 19.665 14.3938 19.665 13.4361V4.93066C19.6236 4.96179 19.5813 4.99177 19.5382 5.02054L11.7529 10.211Z" fill="#FFCA56" />
+    <path d="M1.40908 4.09423L9.19474 9.28487C9.48946 9.48137 9.82723 9.57959 10.165 9.57959C10.5028 9.57959 10.8406 9.48133 11.1353 9.28487L18.921 4.09423C19.3869 3.78381 19.665 3.26428 19.665 2.70356C19.665 1.73942 18.8807 0.955078 17.9166 0.955078H2.41352C1.44942 0.955115 0.66504 1.73946 0.66504 2.70449C0.664751 2.97955 0.732542 3.2504 0.862367 3.49289C0.992192 3.73538 1.18001 3.94197 1.40908 4.09423Z" fill="#FFCA56" />
+  </svg>
+  <a href="mail:renovacya24@mail.ru">renovacya24@mail.ru</a>
+</div>
+
+<div class="footer__soc-item">
+  <svg width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.56299 0.570313C5.67409 0.572958 3.86328 1.36398 2.52763 2.76993C1.19198 4.17588 0.440502 6.082 0.437988 8.07031C0.437988 13.4547 7.07611 20.1984 7.35814 20.4828C7.413 20.5389 7.48649 20.5703 7.56299 20.5703C7.63949 20.5703 7.71297 20.5389 7.76783 20.4828C8.04986 20.1984 14.688 13.4547 14.688 8.07031C14.6855 6.082 13.934 4.17588 12.5983 2.76993C11.2627 1.36398 9.45188 0.572958 7.56299 0.570313ZM7.56299 11.5078C6.91711 11.5078 6.28573 11.3062 5.7487 10.9285C5.21167 10.5508 4.79311 10.0139 4.54594 9.38579C4.29878 8.75767 4.23411 8.0665 4.36011 7.39969C4.48612 6.73288 4.79714 6.12038 5.25384 5.63963C5.71055 5.15889 6.29243 4.8315 6.9259 4.69886C7.55937 4.56623 8.21597 4.6343 8.81269 4.89448C9.4094 5.15465 9.91942 5.59525 10.2783 6.16054C10.6371 6.72583 10.8286 7.39044 10.8286 8.07031C10.8281 8.98182 10.4838 9.85582 9.87153 10.5004C9.25922 11.1449 8.42892 11.5072 7.56299 11.5078Z" fill="#FFCA56" />
+  </svg>
+  <p>г. Казань, ул. Родины, д. 17</p>
+</div>
+<div class="header__socials">
+  <a class="header__socials-whatsapp" href="whatsapp://send?phone=+79872972228/" target="_blank"><img alt="вотсап" loading="lazy" width="29" height="29" decoding="async" data-nimg="1" src="img/whatsap.svg" style="color: transparent"></a>
+  <a class="header__socials-telegram" href="https://t.me/+79872972228" target="_blank"><img alt="телеграм" loading="lazy" width="29" height="29" decoding="async" data-nimg="1" src="img/telegr.svg" style="color: transparent"></a>
+  <a class="header__socials-vk" href="https://vk.com/club225952146" target="_blank"><img alt="вк" loading="lazy" width="29" height="29" decoding="async" data-nimg="1" src="img/vk.svg" style="color: transparent"></a>
+</div>
+
+</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ ОБР СВЯЗИ передается  в кнопку через data-modal="modal-form"  -->
+<div class="modal modal-form hide" id="modal-form" >
+  <div class="modal__dialog">      
+      <div class="modal__content form">
+          <div class="modal__close" data-close>&times;</div>
+          <div class="contacts__form">
+              <h3 class="modal__title">Заявка на обратный звонок </h3>
+              
+              <form class="form modal__form">
+                <div class="input">
+                  <div class="input__item">
+                  <input name="text" type="text" class="input__name" id="name" placeholder="Ваше имя" required="">
+                  <span class="error"></span>
+        
+                </div>
+                  <div class="input__item">
+                  <input name="phone" type="tel" class="input__phone" id="phone" placeholder="Ваш телефон" required="">
+                  <span class="error"></span>
+                  </div>
+                 <p class="politics">Нажимая на кнопку, вы соглашаетесь с  <a href="#"> политикой обработки персональных данных</a></p> 
+            
+
+                  <button class="btn call-button big__button ">
+                    <span>Заказать звонок</span>
+                  </button>
+                </div>
+        
+              </form>
+
+
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО С КВАРТИРОЙ  передается  в кнопку через data-modal="modal-choice" -->
+<div class="modal modal-choice hide" id="modal-choice" >
+  <div class="modal__dialog">      
+      <div class="modal__content ">
+          <div class="modal__close" data-close>&times;</div>
+          <div class="tabs js-tabs">
+            <ul class="tabs__tab-list">
+                <li class="js-tab-trigger tabs__trigger2 is-selected">Без террасы</li>
+                <li class="js-tab-trigger tabs__trigger2">С террасой</li>
+            </ul>
+            <section id="section1" role="tabpanel" class="tabs__panel js-tab-panel">
+              <img src="img/modal-sheme.png">    
+              <div class="tabs__panel-text">
+              <h3><strong>Однокомнатная квартира №1</strong>: (лоджия, совмещенный) </h3>
+<ul>
+  <li>- Общая площадь: <strong>37.60 кв.м,</strong> </li>
+  <li>- Жилая площадь: <strong>10,95 кв.м, </strong> </li>
+  <li>- Площадь кухни: <strong>10,95 кв.м.</strong> </li>
+  <li>- Площадь комната: <strong>37.60 кв.м,</strong> </li>
+  <li>Вид: во двор и на улицу в сторону дома №16</li>
+</ul>
+              </div>
+<button class="btn call-button ">
+  <span>Узнать цену</span>
+  <svg
+              width="55"
+              height="55"
+              viewBox="0 0 55 55"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="27.5088"
+                cy="27.0741"
+                r="26.9712"
+                fill="#FFCA56"
+              />
+              <path
+                d="M36.2213 27.7812C36.6118 27.3907 36.6118 26.7575 36.2213 26.367L29.8573 20.003C29.4668 19.6125 28.8336 19.6125 28.4431 20.003C28.0526 20.3936 28.0526 21.0267 28.4431 21.4172L34.0999 27.0741L28.4431 32.731C28.0526 33.1215 28.0526 33.7546 28.4431 34.1452C28.8336 34.5357 29.4668 34.5357 29.8573 34.1452L36.2213 27.7812ZM19.5034 28.0741H35.5142V26.0741H19.5034V28.0741Z"
+                fill="#191816"
+              />
+            </svg>
+</button>
+             </section>
+            <section id="section2" role="tabpanel" class="tabs__panel js-tab-panel">
+              <img src="img/modal-sheme.png">  
+            
+            <h3><strong>Однокомнатная квартира №1</strong>: (лоджия, совмещенный) </h3></section>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

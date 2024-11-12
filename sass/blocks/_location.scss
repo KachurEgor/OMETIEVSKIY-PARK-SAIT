@@ -1,0 +1,154 @@
+//6 блок расположение
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  gap: 30px;
+  &__img {
+    position: relative;
+   img{
+    @include adaptiv-value("border-top-left-radius", 150, 60, 0);
+
+   }
+  }
+
+  .feature-item {
+    flex: 0 0 calc(50% - 30px);
+    overflow: hidden;
+    transition: transform 0.3s;
+
+    p {
+      font-weight: 400;
+      @include adaptiv-value("font-size", 20, 16, 0);
+      color: $secondary-color;
+      line-height: 175%;
+    }
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .feature-content {
+      @include adaptiv-value("padding", 31, 15, 0);
+      position: absolute;
+      bottom: 3px;
+      background-color: $primary-color;
+      border-radius: 0 150px 0 0;
+      width: 90%;
+      h3 {
+        font-weight: 600;
+        @include adaptiv-value("font-size", 30, 22, 0);
+        color: $secondary-color;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #666;
+      }
+    }
+  }
+}
+
+
+
+.info{
+  background: #3a2f1f; // Цвет фона
+  color: #fff;
+  @include adaptiv-value("padding", 50, 20, 0);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+&__flex{
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  @include adaptiv-value("gap", 300, 0, 0);
+}
+  h3 {
+    font-weight: 700;
+    @include adaptiv-value("font-size", 50, 28, 0);
+margin-bottom: 30px;
+  }
+&__items{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 400;
+    @include adaptiv-value("font-size", 30, 20, 0);
+    color: $text-color;
+    p{
+      @include adaptiv-value("font-size", 30, 20, 0);
+    }
+    a{
+      color: $text-color;  
+    }
+
+    .icon {
+      margin-right: 8px;
+    }
+
+
+  }
+
+
+
+  .buttons {
+    display: flex;
+    @include adaptiv-value("gap", 60, 10, 0);
+
+    .route, .organization {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      border: 1px solid #f1c40f;
+      border-radius: 5px;
+      background-color: transparent;
+      color: #f1c40f;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #f1c40f;
+        color: #3a2f1f;
+      }
+    }
+  }
+}
+
+.tour-block {
+  @include adaptiv-value("margin-top", 40,10, 0);
+  border: 2px solid #ffca56;
+border-radius: 10px;
+  @include adaptiv-value("padding", 40,10, 0);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: bold;
+  @include adaptiv-value("font-size", 50,20, 0);
+
+
+  .tour-title {
+    color: $text-color; // Цвет текста "3D тур" (черный, можно поменять при необходимости)
+  }
+
+  .tour-link {
+    color: $primary-color; // Цвет ссылки
+    @include adaptiv-value("font-size", 30,13, 0);
+    text-decoration: underline;
+
+  }
+}

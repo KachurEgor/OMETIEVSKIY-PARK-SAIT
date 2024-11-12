@@ -1,0 +1,227 @@
+@import "../sass/mixins";
+@import "../sass/variables";
+@import "../sass/normalize";
+@import "../sass/blocks/header";
+@import "../sass/blocks/project";
+@import "../sass/blocks/sheme";
+@import "../sass/blocks/infrastructure";
+@import "../sass/blocks/consultation";
+@import "../sass/blocks/location";
+@import "../sass/blocks/ipoteka";
+@import "../sass/blocks/step";
+@import "../sass/blocks/gallery";
+@import "../sass/blocks/footer";
+@import "../sass/blocks/modal";
+@import "../sass/media";
+/* styles.scss */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  color: $text-color;
+}
+h2 {
+  font-weight: 700;
+  @include adaptiv-value("font-size", 50, 28, 0);
+  line-height: 170%;
+  color: $secondary-color;
+  margin-bottom: 30px;
+  text-align: center;
+  svg {
+    margin-left: 10px;
+  }
+}
+p {
+  font-weight: 400;
+  @include adaptiv-value("font-size", 20, 16, 0);
+}
+a {
+  color: $secondary-color;
+  transition: 0.4s;
+  &:hover {
+    color: $primary-color;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.section {
+  @include adaptiv-value("padding-top", 50, 20, 0);
+  @include adaptiv-value("padding-bottom", 60, 30, 0);
+}
+.btn {
+  background-color: $primary-color;
+  border: none;
+  transition: background-color 0.3s;
+  border-radius: 120px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+
+  // border:2px solid transparent ;
+  &:hover {
+    background-color: rgba(255, 201, 86, 0.541);
+    -webkit-box-shadow: none;
+    color: $primary-color;
+    box-shadow: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    box-shadow: 0 0 12px rgba(17, 2, 2, 0.164);
+    color: $secondary-color;
+    //color: $primary-color;
+    // border:2px solid $primary-color ;
+  }
+  &:active {
+    background-color: #ffc956b2;
+  }
+}
+.btn-notbg {
+  background-color: transparent;
+  border: 2px solid $primary-color;
+  border-radius: 120px;
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: $primary-color;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: $primary-color;
+    color: $secondary-color;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  &:active {
+    background-color: #ffc956b2;
+  }
+}
+.call-button {
+  font-size: 17px;
+  span {
+    @include adaptiv-value("padding", 20, 10, 0);
+
+  }
+  svg {
+    border-left: 3px solid #3f372c;
+    border-radius: 100%;
+  }
+}
+
+.big__button {
+  @include adaptiv-value("font-size", 25, 16, 0);
+  
+  svg {
+    border-left: 5px solid #3f372c;
+  }
+  span {
+    padding: 25px 40px;
+  }
+}
+// Медиазапросы для адаптивности
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+  .project__image,
+  .project__content {
+    flex: 1;
+  }
+}
+
+.is-selected {
+  display: block;
+}
+
+
+
+
+
+
+
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Стили навигации */
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.nav__link {
+ 
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+/* Стили для бургер-меню */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Адаптивный стиль */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+
+  /* Открытое мобильное меню */
+  .nav.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+  }
+  
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Анимация иконки бургера на крестик */
+  .burger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

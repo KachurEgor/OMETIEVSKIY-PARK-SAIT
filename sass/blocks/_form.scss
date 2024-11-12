@@ -1,0 +1,39 @@
+
+
+.form {
+  background-color:$color-blue;
+  margin: 0 30px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  padding: 20px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items:center
+  }
+  &__inputs{
+    background-color:$color-text-white;
+    padding: 20px;
+    border-radius: 20px;
+    flex: 0 1 45%;
+  }
+  &__text{
+    flex:0 1 40%;
+    .title-h2{
+      @include adaptiv-value("font-size", 35, 20, 0);
+    }
+    p{
+      @include adaptiv-value("font-size", 25, 16, 0);
+      margin-top: 20px;
+    }
+  }
+}
+
+.form__text {
+}
+.form__inputs {
+}
+.contacts__form {
+}
+.contacts__form-input {
+}

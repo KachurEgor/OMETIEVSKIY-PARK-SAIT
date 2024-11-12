@@ -1,0 +1,162 @@
+@media screen and (min-width: 1980px) {
+  .infrastructure__info {
+    gap: 52px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+}
+@media screen and (max-width: 1200px) {
+  .footer__info strong {
+    font-size: 20px;
+}
+
+}
+@media screen and (max-width: 1024px) {
+  .info__flex {
+    justify-content: space-between;
+    gap: 0;
+  }
+  .infrastructure__info {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .info__flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .project__image .project__badge{
+    top: 24%;
+    left: 30%;
+  }
+  .infrastructure__image .infrastructure__badge {
+    top: 33%;
+    left: 24%;
+  }
+  .main{
+    height: 660px;
+  }
+  .input {
+    flex-direction: column;
+    input {
+      @include adaptiv-value("width", 700, 300, 0);
+    }
+  }
+}
+@media screen and (min-width: 830px) {
+
+  .project__title-830 {
+    display: none;
+  }
+}
+@media screen and (max-width: 830px) {
+ 
+  .big__button svg {
+    height: 60px;
+    width: 60px;
+}
+  .btn.big__button span {
+    padding: 15px 25px;
+}
+  .project__items {
+    flex-direction: column;
+  }
+  .project__title {
+    display: none;
+  }
+  .project__image {
+    width: 75%;
+  }
+  .project__image {
+    @include adaptiv-value("margin-bottom", 30, 10, 0);
+  }
+  .infrastructure__items {
+    flex-direction: column;
+  }
+  .infrastructure__image {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tabs .tabs__trigger {
+    padding: 19px 20px;
+  }
+  .features {
+    flex-direction: column;
+    .feature-item {
+      flex: 0 0 90%;
+    }
+    
+  }
+  
+ 
+  .swiper-slide img {
+    height: 289px;
+}
+  .swiper {
+    height: auto;
+}
+  .infrastructure__title svg {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  .buttons {
+    flex-direction: column;
+    gap: 32px;
+  }
+ 
+  .footer__info-link a {
+    font-size: 20px;
+}
+  footer p,.footer__soc,.footer__soc p {
+    font-size: 20px;
+}
+  .main__banner {
+    text-align: center;
+    .btn{
+      margin: auto;
+    }
+}
+  .infrastructure__info-item {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .tabs__trigger {
+    padding: 15px 24px;
+    //width: 70%;
+        margin: auto;
+   
+}
+
+}
+
+@media screen and (max-width: 470px) {
+  .tour-block {
+
+    border: none;
+    justify-content: center;
+  }
+
+  .infrastructure__title svg:nth-child(1){
+  display: none;
+  }
+  .infrastructure__title svg:nth-child(2)
+  {
+    display: inline-block;
+  }
+
+  .project__image {
+    width: 100%;
+  }
+  .infrastructure__title svg {
+    width: 34%;
+  }
+}

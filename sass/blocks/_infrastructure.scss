@@ -1,0 +1,147 @@
+//4 блок инфраструктура
+
+.infrastructure {
+  
+
+
+  .pict {
+    padding: 50%;
+    background: #ccc url(../img/garden.png) no-repeat center top;
+    background-size: cover;
+    border-radius: 10px  100px 10px 10px;
+    position: relative;
+  }
+  
+  .pict:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    @include adaptiv-value("height", 22, 10, 0);
+    margin-top: -5px;
+    background: #fff;
+
+  }
+  .pict > span {
+    position: absolute;
+    bottom: 0;
+    @include adaptiv-value("width", 22, 10, 0);
+    height: 50%;
+    background: #fff;
+  }
+  
+  .pict > span:nth-of-type(1) {
+    left: 40%;
+  }
+  
+  .pict > span:nth-of-type(3) {
+    left: 50%;
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include adaptiv-value("gap", 52, 20, 0);
+    margin-top: 10px;
+
+    &-item {
+      background-color: $text-color;
+      padding: 20px;
+      width: 312px;
+      text-align: center;
+      border-radius: 8px;
+      border: 2px solid $primary-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      span {
+        display: block;
+        font-weight: 700;
+font-size: 40px;
+      color: $secondary-color;
+      }
+
+      p {
+        font-weight: 600;
+        color: $secondary-color;
+font-size: 20px;
+      }
+    }
+  }
+
+
+  &__items {
+    display: flex;
+    gap: 4%;
+    margin-bottom:60px ;
+  }
+
+  // Блок изображения
+  &__image {
+    position: relative;
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .infrastructure__badge {
+      position: absolute;
+      top: 35%;
+      left: 28%;
+      @include adaptiv-value("width", 190, 160, 0);
+      @include adaptiv-value("height", 190, 160, 0);
+      background-color: $primary-color;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-weight: 700;
+      @include adaptiv-value("font-size", 20, 16, 0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      @include adaptiv-value("gap", 20, 10, 0);
+      color: $secondary-color;
+      outline:1px dashed $secondary-color;
+      outline-offset:-11px;
+      span {
+        font-weight: 400;
+        @include adaptiv-value("font-size", 18, 16, 0);
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+
+  // Блок контента
+  &__content {
+    flex: 1;
+p{
+      font-weight: 400;
+      @include adaptiv-value("font-size", 20, 16, 0);
+      line-height: 175%;
+      margin-bottom: 20px;
+      color: $secondary-color;
+      span {
+        font-weight: bold;
+        
+      }
+}
+  
+
+    
+  }
+}
+
+.infrastructure__title .choice-2 {
+  display: none;
+}

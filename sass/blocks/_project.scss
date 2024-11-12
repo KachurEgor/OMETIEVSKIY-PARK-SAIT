@@ -1,0 +1,136 @@
+// второй блок
+
+.project {
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 10px;
+
+    &-item {
+      background-color: $text-color;
+      @include adaptiv-value("padding", 20, 10, 0);
+      @include adaptiv-value("width", 200, 137, 0);
+      text-align: center;
+      border-radius: 8px;
+      border: 2px solid $primary-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include adaptiv-value("gap", 20, 7, 0);
+      span {
+        display: block;
+        font-weight: 700;
+        @include adaptiv-value("font-size", 40, 30, 0);
+        color: $secondary-color;
+      }
+
+      p {
+        font-weight: 600;
+        color: $secondary-color;
+        @include adaptiv-value("font-size", 20, 14, 0);
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    gap: 4%;
+    @include adaptiv-value("margin-bottom", 60, 10, 0);
+  }
+
+  // Блок изображения
+  &__image {
+    position: relative;
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .project__badge {
+      position: absolute;
+      top: 35%;
+      left: 48%;
+      @include adaptiv-value("width", 190, 160, 0);
+      @include adaptiv-value("height", 190, 160, 0);
+      background-color: $primary-color;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-weight: 700;
+      @include adaptiv-value("font-size", 20, 16, 0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      @include adaptiv-value("gap", 20, 10, 0);
+      color: $secondary-color;
+      outline: 1px dashed $secondary-color;
+      outline-offset: -11px;
+      span {
+        font-weight: 400;
+        @include adaptiv-value("font-size", 18, 16, 0);
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+
+  // Блок контента
+  &__content {
+    flex: 1;
+    p {
+      font-weight: 400;
+      @include adaptiv-value("font-size", 20, 16, 0);
+      line-height: 175%;
+      margin-bottom: 20px;
+      color: $secondary-color;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.pict {
+  padding: 50%;
+  background: #ccc url(../img/building.png) no-repeat center top;
+  background-size: cover;
+  border-radius: 100px 10px 10px 10px;
+  position: relative;
+}
+
+.pict:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  @include adaptiv-value("height", 22, 10, 0);
+  margin-top: -5px;
+  background: #fff;
+}
+.pict > span {
+  position: absolute;
+  bottom: 0;
+  @include adaptiv-value("width", 22, 10, 0);
+  height: 50%;
+
+  background: #fff;
+}
+
+.pict > span:nth-of-type(1) {
+  left: 60%;
+}
+
+.pict > span:nth-of-type(3) {
+  left: 50%;
+}

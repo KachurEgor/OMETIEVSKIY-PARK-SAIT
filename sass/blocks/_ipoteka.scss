@@ -1,0 +1,28 @@
+.ipoteka {
+p{
+  color: $secondary-color;
+  text-align: center;
+}
+  // .ipoteka__items
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    @include adaptiv-value("gap", 30, 20, 0);
+    justify-content: center;
+    @include adaptiv-value("margin-bottom", 40, 20, 0);
+  }
+
+  // .ipoteka__item
+
+  &__item {
+    border-radius: 8px;
+    border: 2px solid $primary-color;
+    width: 312px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+}

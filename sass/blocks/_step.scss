@@ -1,0 +1,239 @@
+.step {
+  .tabs.tabs__tab-list {
+      display: flex;
+      list-style: none;
+      margin-bottom: 30px;
+      padding: 0;
+      justify-content: center;
+      @include adaptiv-value("gap", 30, 20, 0);
+      flex-wrap: wrap;
+      .active{
+        border: 2px solid $primary-color;
+    background: $primary-color;
+    color: #000;
+      }
+    }
+    .swip-nav{
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items:center ;
+    }
+  
+  h3{
+    font-weight: 600;
+    font-size: 18px;
+    color: $secondary-color;
+  }
+  // .step__items
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    gap: 30px;
+  }
+
+  // .step__item
+
+  &__item {
+    flex: 0 0 calc(23% - 30px);
+    transition: transform 0.3s;
+  }
+
+  // .step__img
+
+  &__img {
+    position: relative;
+    img{
+      border-radius: 60px 0 0 0;
+    }
+
+  }
+
+  // .step__content
+
+  &__content {
+    padding: 15px;
+    position: absolute;
+    bottom: 3px;
+    background-color: $primary-color;
+    border-radius: 0 150px 0 0;
+    width: 90%;
+  }
+}
+
+
+
+.swiper2 {
+  margin-bottom: 23px;
+  overflow: hidden;
+  padding-bottom: 5px;
+
+.swiper-wrapper{
+  margin-bottom: 23px;
+}
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+
+}
+
+.swiper-slide img {
+  display: block;
+  border-top-left-radius: 150px;
+  @include adaptiv-value("border-top-left-radius", 60, 0, 0);
+  //height: 230px;
+  margin: auto;
+  width: 100%;
+}
+.step__content{
+  bottom: 0;
+}
+}
+
+.swiper-pagination2 {
+position: relative;
+
+width: 215px!important;
+justify-content: center;
+text-align: center;
+cursor: pointer;
+.swiper-pagination-bullet-active{
+  background: $primary-color;
+}
+
+.swiper-pagination-bullet{
+  // background:#D9D9D9;
+  width: 15px;
+  height: 15px;
+}
+}
+
+.swiper-nav{
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.swiper-button-prev2{
+  position: relative;
+}
+
+
+
+
+.swiper-button-next2{
+  position: relative;
+}
+.swiper-button-next2:after{
+  color: $secondary-color;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 20px;
+  /* padding-top: 15px; */
+  top: 45%;
+  left: 50%;
+  /* content: ''; */
+  /* display: block; */
+  width: 5px;
+  height: 5px;
+  /* border-left: 3px solid gray; */
+  /* border-bottom: 3px solid gray; */
+  border-radius: 90%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  background-color: $primary-color;
+  cursor: pointer;
+}
+.swiper-button-prev2:after{
+  color: $secondary-color;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 20px;
+  /* padding-top: 15px; */
+  top: 45%;
+  left: 50%;
+  /* content: ''; */
+  /* display: block; */
+  width: 5px;
+  height: 5px;
+  /* border-left: 3px solid gray; */
+  /* border-bottom: 3px solid gray; */
+  border-radius: 90%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  background-color: $primary-color;
+  cursor: pointer;
+}
+
+.tabs2.tabs__tab-list {
+  display: flex;
+  list-style: none;
+  margin-bottom: 30px;
+  padding: 0;
+  justify-content: center;
+  @include adaptiv-value("gap", 30, 20, 0);
+  flex-wrap: wrap;
+}
+.tabs2{
+  .tabs__trigger {
+    padding: 19px 47px;
+    border-radius: 120px;
+    display: block;
+    font-weight: bold;
+    margin: 0 5px;
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    @include adaptiv-value("font-size", 18, 16, 0);
+    cursor: pointer;
+    
+    &.active {
+      border: 2px solid transparent;
+      background: $primary-color;
+      color: #000;
+    }
+  }
+  
+  .tabs__panel {
+    display: none;
+    &-text {
+      margin-top: 20px;
+      margin-bottom: 40px;
+      font-size: 20px;
+      text-align: left;
+  
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      h3 {
+        @include adaptiv-value("font-size", 22, 16, 0);
+        margin-bottom: 10px;
+      }
+    }
+    .is-initialized & {
+      display: inherit;
+      text-align: center;
+    }
+  
+    &.is-hidden {
+      display: none;
+    }
+  }
+  }
