@@ -53,6 +53,9 @@
   }
 }
 @media screen and (max-width: 830px) {
+  .footer__logo {
+    margin-left: 0;
+}
  
   .big__button svg {
     height: 60px;
@@ -81,6 +84,13 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .main__address{
+    font-weight: 700;
+  }
+   .header__phone{
+   color: $primary-color;
+   text-decoration: underline;
+}
   .tabs .tabs__trigger {
     padding: 19px 20px;
   }
