@@ -89,7 +89,7 @@
     flex: 1;
     p {
       font-weight: 400;
-      @include adaptiv-value("font-size", 20, 16, 0);
+      @include adaptiv-value("font-size", 19, 16, 0);
       line-height: 175%;
       margin-bottom: 20px;
       color: $secondary-color;

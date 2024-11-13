@@ -338,6 +338,11 @@ template {
           align-items: center;
   margin-top: 10px;
 }
+@media (max-width: 1980px) {
+  .d-flex {
+    margin-top: calc(0px + 10 * (100vw - 320px) / (1980 - 320));
+  }
+}
 
 .header__phone.d-block-768 {
   display: none;
@@ -608,12 +613,12 @@ template {
   color: #FFCA56;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 830px) {
   .d-flex {
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 830px) {
   .header__socials.d-block-768 {
     display: none;
   }
@@ -839,14 +844,14 @@ template {
 }
 .project__content p {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 175%;
   margin-bottom: 20px;
   color: #191816;
 }
 @media (max-width: 1980px) {
   .project__content p {
-    font-size: calc(16px + 4 * (100vw - 320px) / (1980 - 320));
+    font-size: calc(16px + 3 * (100vw - 320px) / (1980 - 320));
   }
 }
 .project__content p span {
@@ -1543,6 +1548,10 @@ template {
   }
 }
 
+.button {
+  display: none;
+}
+
 .ipoteka p {
   color: #191816;
   text-align: center;
@@ -2078,6 +2087,10 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer__logo {
+  margin-left: 20px;
 }
 
 /*modal ЗАЯВКА*/

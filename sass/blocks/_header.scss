@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  @include adaptiv-value("margin-top", 10, 0, 0);
 }
 .header__phone.d-block-768{
   display: none;
@@ -210,14 +210,14 @@ img{
     }
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 830px) {
 .d-flex{
   display: none;
 }
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
   .header__socials.d-block-768{
    
     display:none;
@@ -274,3 +274,4 @@ img{
     }
   }
 }
+
