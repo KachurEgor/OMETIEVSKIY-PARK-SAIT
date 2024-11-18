@@ -386,61 +386,71 @@
 
       
     </h2>
+
+    <div class="d-none">
+      <div class="choice__text">
+        <p>Перед вами план типового этажа. <strong>Нажмите на интересующую вас секцию и выберите квартиру.</strong>
+          Некоторые квартиры можно выбрать с террасой и без.
+      <p>
+          В комплексе предусмотрены одно-, двух- и трехкомнатные квартиры, в том числе студии, а также квартиры с террасой.
+           Общее количество  - 184 квартиры.</p>
+    </div>
+    </div>
+
 <div class="choice__block">
     <div class="floor-plan-container">
       <img src="/img/vibor.png" alt="План этажа">
-      <a data-modal="#modal-choice" class="clickable-area section1"></a>
-      <a data-modal="#modal-choice" class="clickable-area section2"></a>
-      <a data-modal="#modal-choice" class="clickable-area section3"></a>
-      <a data-modal="#modal-choice" class="clickable-area section4"></a>
+      <a data-modal="#modal-choice" data-section="section1" class="clickable-area section1"></a>
+      <a data-modal="#modal-choice" data-section="section2" class="clickable-area section2"></a>
+      <a data-modal="#modal-choice" data-section="section3" class="clickable-area section3"></a>
+      <a data-modal="#modal-choice" data-section="section4" class="clickable-area section4"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section5"></a>
+      <a data-modal="#modal-choice" data-section="section5" class="clickable-area section5"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section6"></a>
+      <a data-modal="#modal-choice" data-section="section6" class="clickable-area section6"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section7"></a>
+      <a data-modal="#modal-choice" data-section="section7" class="clickable-area section7"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section8"></a>
+      <a data-modal="#modal-choice" data-section="section8" class="clickable-area section8"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section9"></a>
+      <a data-modal="#modal-choice" data-section="section9" class="clickable-area section9"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section10"></a>
+      <a data-modal="#modal-choice" data-section="section10" class="clickable-area section10"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section11"></a>
+      <a data-modal="#modal-choice" data-section="section11" class="clickable-area section11"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section12"></a>
+      <a data-modal="#modal-choice" data-section="section12" class="clickable-area section12"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section13"></a>
+      <a data-modal="#modal-choice" data-section="section13" class="clickable-area section13"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section14"></a>
+      <a data-modal="#modal-choice" data-section="section14" class="clickable-area section14"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section15"></a>
+      <a data-modal="#modal-choice" data-section="section15" class="clickable-area section15"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section16"></a>
+      <a data-modal="#modal-choice" data-section="section16" class="clickable-area section16"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section17"></a>
+      <a data-modal="#modal-choice" data-section="section17" class="clickable-area section17"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section18"></a>
+      <a data-modal="#modal-choice" data-section="section18" class="clickable-area section18"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section19"></a>
+      <a data-modal="#modal-choice" data-section="section19" class="clickable-area section19"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section20"></a>
+      <a data-modal="#modal-choice" data-section="section20" class="clickable-area section20"></a>
 
-      <a data-modal="#modal-choice" class="clickable-area section21"></a>
+      <a data-modal="#modal-choice" data-section="section21" class="clickable-area section21"></a>
       </div>
 
 
-
-      <p class="choice__text">Перед вами план типового этажа. Нажмите на интересующую вас секцию и выберите квартиру.
+<div class="choice__text d-block">
+      <p>Перед вами план типового этажа. <strong>Нажмите на интересующую вас секцию и выберите квартиру.</strong>
         Некоторые квартиры можно выбрать с террасой и без.
-        
-        В комплексе предусмотрены одно-, двух- и трехкомнатные квартиры, в том числе студии, а также квартиры с террасой. . Общее количество  - 184 квартиры.</p>
+    <p>
+        В комплексе предусмотрены одно-, двух- и трехкомнатные квартиры, в том числе студии, а также квартиры с террасой.
+         Общее количество  - 184 квартиры.</p>
   </div>
 </div>
 </div>
-
-
-
+</div>
 
 
     <!--Блок 4  ИНФРАСТУКТУРА-->
@@ -984,19 +994,14 @@
           
 
       </div>
- 
-    </div>
 
+    </div>
     <div class="swiper-nav">    <div class="swiper-button-prev  swiper-button-prev1"></div>
     <div class="swiper-pagination swiper-pagination1"></div>
     <div class="swiper-button-next swiper-button-next1"></div></div>
-
-  
   
   </div>
 </div>
-
-
 
 <!-- БЛОК ХОД СТРОИТЕЛЬСТВА -->
 <div class="step section" id="step">
@@ -1168,30 +1173,28 @@
 </div>
 
 <!-- МОДАЛЬНОЕ ОКНО С КВАРТИРОЙ  передается  в кнопку через data-modal="modal-choice" -->
-<div class="modal modal-choice hide" id="modal-choice" >
-  <div class="modal__dialog">      
-      <div class="modal__content ">
-          <div class="modal__close" data-close>&times;</div>
-          <div class="tabs js-tabs">
-            <ul class="tabs__tab-list">
-                <li class="js-tab-trigger tabs__trigger2 is-selected">Без террасы</li>
-                <li class="js-tab-trigger tabs__trigger2">С террасой</li>
-            </ul>
-            <section id="section1" role="tabpanel" class="tabs__panel js-tab-panel">
-              <img src="img/modal-sheme.png">    
-              <div class="tabs__panel-text">
-              <h3><strong>Однокомнатная квартира №1</strong>: (лоджия, совмещенный) </h3>
-<ul>
-  <li>- Общая площадь: <strong>37.60 кв.м,</strong> </li>
-  <li>- Жилая площадь: <strong>10,95 кв.м, </strong> </li>
-  <li>- Площадь кухни: <strong>10,95 кв.м.</strong> </li>
-  <li>- Площадь комната: <strong>37.60 кв.м,</strong> </li>
-  <li>Вид: во двор и на улицу в сторону дома №16</li>
-</ul>
-              </div>
-<button class="btn call-button ">
-  <span>Узнать цену</span>
-  <svg
+<div class="modal modal-choice hide" id="modal-choice">
+  <div class="modal__dialog">
+    <div class="modal__content">
+      <div class="modal__close" data-close>&times;</div>
+
+      <!-- Вкладки -->
+      <div class="tabs js-tabs">
+        <ul class="tabs__tab-list">
+          <li class="js-tab-trigger tabs__trigger2 is-selected" id="without-terrace">Без террасы</li>
+          <li class="js-tab-trigger tabs__trigger2" id="with-terrace">С террасой</li>
+        </ul>
+
+        <!-- Панели для контента -->
+        <section id="section1" role="tabpanel" class="tabs__panel js-tab-panel">
+          <img id="modal-image" src="" alt="Фото квартиры" />
+          <div class="tabs__panel-text">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+          </div>
+          <button class="btn call-button" data-modal="#modal-form">
+            <span>Узнать цену</span>
+            <svg
               width="55"
               height="55"
               viewBox="0 0 55 55"
@@ -1209,17 +1212,12 @@
                 fill="#191816"
               />
             </svg>
-</button>
-             </section>
-            <section id="section2" role="tabpanel" class="tabs__panel js-tab-panel">
-              <img src="img/modal-sheme.png">  
-            
-            <h3><strong>Однокомнатная квартира №1</strong>: (лоджия, совмещенный) </h3></section>
-        </div>
+          </button>
+        </section>
       </div>
+    </div>
   </div>
 </div>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/imask"></script>

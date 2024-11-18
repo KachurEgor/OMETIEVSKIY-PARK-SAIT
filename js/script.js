@@ -259,14 +259,11 @@ navLinks.forEach(link => {
 
 
 // ТАБЫ В МОДАЛЬНОМ ОКНЕ С КВАРТИРОЙ
-
     function initTabs(tabsContainerSelector) {
       const tabsContainers = document.querySelectorAll(tabsContainerSelector);
-    
       tabsContainers.forEach((tabsContainer) => {
         const tabs = tabsContainer.querySelectorAll('.tabs__trigger2');
         const tabsContent = tabsContainer.querySelectorAll('.tabs__panel');
-    
         function hideTabContent() {
           tabsContent.forEach(item => {
             item.classList.add('hide');
@@ -304,3 +301,721 @@ navLinks.forEach(link => {
     
     // Инициализируем все наборы табов с классом .tabs
     initTabs('.tabs');
+    // ВЫБОР КВАРТИРЫ 
+    const sectionData = {
+      section1: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Однокомнатная квартира №1",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Однокомнатная квартира №1 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section2: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Двухкомнатная квартира №5",
+          description: "С балконом, раздельный санузел, общая площадь — 50 м².",
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Двухкомнатная квартира №5 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      
+      section3: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №10",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+
+      section4: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+
+      section5: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+
+      section6: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section7: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section8: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+
+      section9: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+
+      section10: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section11: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section12: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section13: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section14: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section15: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section16: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section17: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section18: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section19: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section20: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+      section21: {
+        withoutTerrace: {
+          img: "img/modal-sheme.png",
+          title: "Трехкомнатная квартира №1065",
+          description: `
+      <ul>
+        <li>- Общая площадь: 35 м²</li>
+        <li>- Жилая площадь: 10,95 кв.м,</li>
+        <li>- Площадь кухни: 12,28 кв.м,</li>
+          <li>- Площадь кухни: 12,28 кв.м,</li>
+            <li>- Площадь комната: 10,95 кв.м. </li>
+              <li>Вид: во двор и на улицу в сторону дома №16 </li>
+      </ul>
+    `,
+        },
+        withTerrace: {
+          img: "img/modal-sheme-terrace.png",
+          title: "Трехкомнатная квартира №10 с террасой",
+          description: `
+          <ul>
+            <li>- Общая площадь: 35 м²</li>
+            <li>- Жилая площадь: 10,95 кв.м,</li>
+            <li>- Площадь кухни: 12,28 кв.м,</li>
+              <li>- Площадь кухни: 12,28 кв.м,</li>
+                <li>- Площадь комната: 10,95 кв.м. </li>
+                  <li>Вид: во двор и на улицу в сторону дома №16 </li>
+          </ul>
+        `,
+        },
+      },
+    };
+
+    const modal = document.getElementById("modal-choice");
+    const modalImage = document.getElementById("modal-image");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDescription = document.getElementById("modal-description");
+    // Функция для открытия модального окна
+    function openModal(section, terraceType = 'withoutTerrace') {
+      if (sectionData[section] && sectionData[section][terraceType]) {
+        const data = sectionData[section][terraceType];
+        modalImage.src = data.img;
+        modalTitle.textContent = data.title;
+        modalDescription.innerHTML = data.description;
+    
+        modal.classList.add('show');
+        modal.classList.remove('hide');
+        document.body.style.overflow = 'hidden';
+    
+        // Управление вкладками внутри модального окна
+        const tabs = modal.querySelectorAll('.tabs__trigger2');
+        tabs.forEach((tab) => {
+          tab.classList.remove('is-selected');
+          if ((terraceType === 'withTerrace' && tab.id === 'with-terrace') ||
+              (terraceType === 'withoutTerrace' && tab.id === 'without-terrace')) {
+            tab.classList.add('is-selected');
+          }
+        });
+      }
+    }
+document.querySelectorAll(".clickable-area").forEach((area) => {
+  area.addEventListener("click", function () {
+    const sectionClass = this.classList[1]; // Получаем класс секции
+    openModal(sectionClass);
+
+    const tabsContainer = modal.querySelector('.tabs');
+    tabsContainer.addEventListener("click", function (event) {
+      const target = event.target;
+      if (target && target.classList.contains("tabs__trigger2")) {
+        const terraceType = target.id === "with-terrace" ? "withTerrace" : "withoutTerrace";
+        openModal(sectionClass, terraceType);
+      }
+    });
+  });
+});
+
+
+
+
+    // function adjustParentSize() {
+    //   const parent = document.querySelector('.choice__block');
+    //   const rotateBlock = document.querySelector('.floor-plan-container');
+      
+    //   const rect = rotateBlock.getBoundingClientRect();
+    //   const newWidth = Math.abs(rect.height); // Высота становится новой шириной
+    //   // const newHeight = Math.abs(rect.width); // Ширина становится новой высотой
+      
+    //   parent.style.height = `${newWidth}px`;
+    //   }
+      
+    //   window.onload = function() {
+    //   if (window.innerWidth <= 992) {
+    //   adjustParentSize();
+    //   }
+    //   };
+      
+    //   window.onresize = function() {
+    //   if (window.innerWidth <= 992) {
+    //   adjustParentSize();
+    //   } else {
+    //   const parent = document.querySelector('.choice__block');
+    //   parent.style.width = 'auto';
+    //   parent.style.height = 'auto';
+    //   }
+    //   };
+
+
+    // const element = document.querySelector('.choice__block');
+    // const rect = element.getBoundingClientRect();
+    // const parent = element.parentNode;
+
+    // // Устанавливаем точные размеры родителя
+    // parent.style.width = `${rect.width}px`;
+    // parent.style.height = `${rect.height}px`;
+
+    // // Корректируем элемент
+    // element.style.transform = 'rotate(0deg)';
+
+
+    
