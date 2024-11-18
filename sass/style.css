@@ -2413,6 +2413,8 @@ footer p {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  max-height: 100%;
+  overflow: auto;
   margin: 40px auto;
 }
 
@@ -2653,6 +2655,11 @@ footer p {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+}
+@media screen and (max-height: 992px) {
+  .modal__dialog {
+    margin: 0;
   }
 }
 @media screen and (max-width: 992px) {
@@ -3107,7 +3114,7 @@ a:hover {
 }
 @media (max-width: 1980px) {
   .call-button span {
-    padding: calc(5px + 15 * (100vw - 320px) / (1980 - 320));
+    padding: calc(10px + 10 * (100vw - 320px) / (1980 - 320));
   }
 }
 .call-button svg {

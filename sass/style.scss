@@ -128,7 +128,7 @@ a {
 .call-button {
   font-size: 17px;
   span {
-    @include adaptiv-value("padding", 20, 5, 0);
+    @include adaptiv-value("padding", 20, 10, 0);
 
   }
   svg {
