@@ -48,7 +48,7 @@
     &-item {
       background-color: $text-color;
       padding: 20px;
-      width: 312px;
+      @include adaptiv-value("width", 312, 230, 0);
       text-align: center;
       border-radius: 8px;
       border: 2px solid $primary-color;

@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+
+
+
+
+
+
+
+  
 const modalTriggers = document.querySelectorAll('[data-modal]');
 const modals = document.querySelectorAll('.modal');
 const modalCloseBtns = document.querySelectorAll('[data-close]');
@@ -937,7 +947,7 @@ navLinks.forEach(link => {
     const modalTitle = document.getElementById("modal-title");
     const modalDescription = document.getElementById("modal-description");
     // Функция для открытия модального окна
-    function openModal(section, terraceType = 'withoutTerrace') {
+    function openModals(section, terraceType = 'withoutTerrace') {
       if (sectionData[section] && sectionData[section][terraceType]) {
         const data = sectionData[section][terraceType];
         modalImage.src = data.img;
@@ -962,14 +972,14 @@ navLinks.forEach(link => {
 document.querySelectorAll(".clickable-area").forEach((area) => {
   area.addEventListener("click", function () {
     const sectionClass = this.classList[1]; // Получаем класс секции
-    openModal(sectionClass);
+    openModals(sectionClass);
 
     const tabsContainer = modal.querySelector('.tabs');
     tabsContainer.addEventListener("click", function (event) {
       const target = event.target;
       if (target && target.classList.contains("tabs__trigger2")) {
         const terraceType = target.id === "with-terrace" ? "withTerrace" : "withoutTerrace";
-        openModal(sectionClass, terraceType);
+        openModals(sectionClass, terraceType);
       }
     });
   });
@@ -978,44 +988,11 @@ document.querySelectorAll(".clickable-area").forEach((area) => {
 
 
 
-    // function adjustParentSize() {
-    //   const parent = document.querySelector('.choice__block');
-    //   const rotateBlock = document.querySelector('.floor-plan-container');
-      
-    //   const rect = rotateBlock.getBoundingClientRect();
-    //   const newWidth = Math.abs(rect.height); // Высота становится новой шириной
-    //   // const newHeight = Math.abs(rect.width); // Ширина становится новой высотой
-      
-    //   parent.style.height = `${newWidth}px`;
-    //   }
-      
-    //   window.onload = function() {
-    //   if (window.innerWidth <= 992) {
-    //   adjustParentSize();
-    //   }
-    //   };
-      
-    //   window.onresize = function() {
-    //   if (window.innerWidth <= 992) {
-    //   adjustParentSize();
-    //   } else {
-    //   const parent = document.querySelector('.choice__block');
-    //   parent.style.width = 'auto';
-    //   parent.style.height = 'auto';
-    //   }
-    //   };
 
 
-    // const element = document.querySelector('.choice__block');
-    // const rect = element.getBoundingClientRect();
-    // const parent = element.parentNode;
 
-    // // Устанавливаем точные размеры родителя
-    // parent.style.width = `${rect.width}px`;
-    // parent.style.height = `${rect.height}px`;
-
-    // // Корректируем элемент
-    // element.style.transform = 'rotate(0deg)';
+});
 
 
-    
+
+

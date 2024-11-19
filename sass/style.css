@@ -1240,6 +1240,11 @@ template {
           justify-content: center;
   gap: 10px;
 }
+@media (max-width: 1980px) {
+  .infrastructure__info-item {
+    width: calc(230px + 82 * (100vw - 320px) / (1980 - 320));
+  }
+}
 .infrastructure__info-item span {
   display: block;
   font-weight: 700;
@@ -1845,6 +1850,11 @@ template {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 1980px) {
+  .ipoteka__item {
+    width: calc(240px + 72 * (100vw - 320px) / (1980 - 320));
+  }
+}
 
 .step .tabs.tabs__tab-list {
   display: -webkit-box;
@@ -2155,7 +2165,7 @@ template {
 }
 @media (max-width: 1980px) {
   .swiper .swiper-slide img {
-    height: calc(300px + 170 * (100vw - 320px) / (1980 - 320));
+    height: calc(260px + 210 * (100vw - 320px) / (1980 - 320));
   }
 }
 
@@ -2264,7 +2274,6 @@ footer {
 }
 footer p {
   font-weight: 300;
-  font-size: 23px;
 }
 
 .footer__info-link a {
@@ -2888,7 +2897,7 @@ footer p {
     margin: auto;
   }
   .infrastructure__info-item {
-    width: 75%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 576px) {

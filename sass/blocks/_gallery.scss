@@ -20,7 +20,7 @@
   display: block;
   border-top-left-radius: 150px;
   @include adaptiv-value("border-top-left-radius", 150, 0, 0);
-  @include adaptiv-value("height", 470, 300, 0);
+  @include adaptiv-value("height", 470, 260, 0);
   margin: auto;
 }
 }
