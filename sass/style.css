@@ -1121,10 +1121,8 @@ template {
 .section17 {
   top: 23%;
   left: 1%;
-  width: 19%;
-  height: 30%;
-  -webkit-clip-path: polygon(0% 0%, 55% 0%, 55% 66%, 69% 66%, 69% 61%, 85% 61%, 86% 72%, 98% 72%, 98% 100%, 1% 99%, 1% 68%, 13% 68%, 14% 42%, 0% 42%);
-          clip-path: polygon(0% 0%, 55% 0%, 55% 66%, 69% 66%, 69% 61%, 85% 61%, 86% 72%, 98% 72%, 98% 100%, 1% 99%, 1% 68%, 13% 68%, 14% 42%, 0% 42%);
+  width: 10%;
+  height: 13%;
 }
 
 .section18 {
@@ -1143,18 +1141,36 @@ template {
 
 .section20 {
   top: 74%;
-  left: 3%;
-  width: 19%;
-  height: 22%;
-  -webkit-clip-path: polygon(41% 0, 100% 0%, 100% 100%, 0% 100%, 0 68%, 29% 68%, 29% 56%, 41% 56%, 41% 45%);
-          clip-path: polygon(41% 0, 100% 0%, 100% 100%, 0% 100%, 0 68%, 29% 68%, 29% 56%, 41% 56%, 41% 45%);
+  left: 11%;
+  width: 11%;
+  height: 14%;
 }
 
 .section21 {
-  top: 72%;
+  top: 86%;
+  left: 3%;
+  width: 19%;
+  height: 10%;
+  -webkit-clip-path: polygon(30% 0, 43% 0, 43% 17%, 100% 17%, 100% 100%, 0 100%, 0 24%, 30% 24%);
+          clip-path: polygon(30% 0, 43% 0, 43% 17%, 100% 17%, 100% 100%, 0 100%, 0 24%, 30% 24%);
+}
+
+.section22 {
+  top: 73%;
   left: 1%;
   width: 8%;
+  height: 18%;
+  -webkit-clip-path: polygon(0% 0%, 98.74% 0%, 98.74% 89.23%, 23.81% 89.23%, 23.81% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 98.74% 0%, 98.74% 89.23%, 23.81% 89.23%, 23.81% 100%, 0% 100%);
+}
+
+.section23 {
+  top: 36%;
+  left: 1%;
+  width: 19%;
   height: 17%;
+  -webkit-clip-path: polygon(10.78% 0%, 52.25% 0%, 52.81% 39.09%, 67.91% 39.09%, 68.19% 30.36%, 84.73% 30.56%, 85.01% 51.09%, 100% 51.29%, 100% 100%, 0.29% 100%, 0% 38.13%, 10.78% 38.1%);
+          clip-path: polygon(10.78% 0%, 52.25% 0%, 52.81% 39.09%, 67.91% 39.09%, 68.19% 30.36%, 84.73% 30.56%, 85.01% 51.09%, 100% 51.29%, 100% 100%, 0.29% 100%, 0% 38.13%, 10.78% 38.1%);
 }
 
 .d-none {
@@ -2365,12 +2381,20 @@ footer p {
   -webkit-backdrop-filter: blur(3.5px);
   backdrop-filter: blur(3.5px);
 }
-.modal .tabs__panel img {
-  width: 390px;
+.modal .call-button {
+  font-size: 17px;
 }
 @media (max-width: 1980px) {
-  .modal .tabs__panel img {
-    width: calc(220px + 170 * (100vw - 320px) / (1980 - 320));
+  .modal .call-button {
+    font-size: calc(14px + 3 * (100vw - 320px) / (1980 - 320));
+  }
+}
+.modal img {
+  width: 270px;
+}
+@media (max-width: 1980px) {
+  .modal img {
+    width: calc(200px + 70 * (100vw - 320px) / (1980 - 320));
   }
 }
 .modal .politics a {
@@ -2410,6 +2434,7 @@ footer p {
   flex-direction: column;
   font-size: calc(12px + 2 * (100vw - 320px) / 1380);
   margin: auto;
+  max-width: 600px;
 }
 
 .modal .form p {
@@ -2435,25 +2460,33 @@ footer p {
   box-shadow: 0px 10px 30px 0px rgba(133, 143, 164, 0.1);
   border-radius: 4px;
   overflow-y: auto;
+  overflow-x: auto;
   margin-left: 5px;
   margin-right: 5px;
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
-  width: 575px;
   text-align: center;
   color: #191816;
+  scrollbar-width: thin;
+  scrollbar-color: #FFCA56 #000000;
 }
 @media (max-width: 1980px) {
   .modal__content {
     padding: calc(20px + 20 * (100vw - 320px) / (1980 - 320));
   }
 }
-@media (max-width: 1980px) {
-  .modal__content {
-    width: calc(300px + 275 * (100vw - 320px) / (1980 - 320));
-  }
+.modal__content::-webkit-scrollbar {
+  width: 5px; /* Ширина всего элемента навигации */
+}
+.modal__content::-webkit-scrollbar-track {
+  background: #948686; /* Цвет дорожки */
+}
+.modal__content::-webkit-scrollbar-thumb {
+  background-color: #3d3d3d; /* Цвет бегунка */
+  border-radius: 20px; /* Округление бегунка */
+  border: 3px solid #050c26; /* Оформление границ бегунка */
 }
 
 @-webkit-keyframes animatetop {
@@ -2597,9 +2630,6 @@ footer p {
   background: #FFCA56;
   color: #000;
 }
-.tabs .tabs__panel {
-  display: none;
-}
 .tabs .tabs__panel-text {
   margin-top: 20px;
   margin-bottom: 40px;
@@ -2643,6 +2673,156 @@ footer p {
   display: none;
 }
 
+.modal__section {
+  max-width: 490px;
+}
+.modal__section h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+@media (max-width: 1980px) {
+  .modal__section h4 {
+    font-size: calc(16px + 2 * (100vw - 320px) / (1980 - 320));
+  }
+}
+.modal__section h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+@media (max-width: 1980px) {
+  .modal__section h3 {
+    font-size: calc(14px + 8 * (100vw - 320px) / (1980 - 320));
+  }
+}
+.modal__section p {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  text-align: left;
+}
+@media (max-width: 1980px) {
+  .modal__section p {
+    margin-bottom: calc(20px + 20 * (100vw - 320px) / (1980 - 320));
+  }
+}
+@media (max-width: 1980px) {
+  .modal__section p {
+    font-size: calc(14px + 6 * (100vw - 320px) / (1980 - 320));
+  }
+}
+.modal__section p ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.modal-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+.modal-display .call-button svg {
+  width: 50px;
+  height: 50px;
+}
+@media (max-width: 1980px) {
+  .modal-display .call-button svg {
+    width: calc(30px + 20 * (100vw - 320px) / (1980 - 320));
+  }
+}
+@media (max-width: 1980px) {
+  .modal-display .call-button svg {
+    height: calc(30px + 20 * (100vw - 320px) / (1980 - 320));
+  }
+}
+
+.modal-choice .modal__content {
+  position: initial;
+}
+
+.tabs__panel-img {
+  height: 188px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 10px;
+}
+.tabs__panel-img img {
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.modal__content.one-section {
+  width: 650px;
+}
+@media (max-width: 1980px) {
+  .modal__content.one-section {
+    width: calc(300px + 350 * (100vw - 320px) / (1980 - 320));
+  }
+}
+
+.modal__content.two-sections {
+  width: 1050px;
+}
+@media (max-width: 1980px) {
+  .modal__content.two-sections {
+    width: calc(300px + 750 * (100vw - 320px) / (1980 - 320));
+  }
+}
+
+.tabs .tabs__tab-list {
+  display: none;
+}
+
+/* Показываем табы только на мобильных устройствах */
+@media (max-width: 768px) {
+  .tabs__panel-img {
+    height: auto;
+  }
+  .modal-display {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto;
+  }
+  .tabs .tabs__trigger2 {
+    margin: auto;
+  }
+  .tabs .tabs__tab-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Или другой подходящий стиль */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Расположение табов в столбик */
+  }
+}
 @media screen and (min-width: 1980px) {
   .infrastructure__info {
     gap: 52px;

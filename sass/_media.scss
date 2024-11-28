@@ -77,6 +77,8 @@
   }
 }
 @media screen and (max-width: 830px) {
+
+
   .choice__text {
     @include adaptiv-value("width", 700, 150, 0);
 

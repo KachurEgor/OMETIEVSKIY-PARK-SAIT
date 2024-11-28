@@ -12,12 +12,14 @@
   background: rgba(143, 177, 152, 0.45);
   -webkit-backdrop-filter: blur(3.5px);
   backdrop-filter: blur(3.5px);
-.tabs__panel{
+  .call-button {
 
+    @include adaptiv-value("font-size", 17, 14, 0);
+}
   img{
 
-    @include adaptiv-value("width", 390, 220, 0);
-  }
+    @include adaptiv-value("width", 270, 200, 0);
+  
 }
 
   .politics a {
@@ -49,6 +51,7 @@
   flex-direction: column;
   font-size: calc(12px + 2 * (100vw - 320px) / 1380);
   margin: auto;
+  max-width: 600px;
 }
 
 .modal .form p {
@@ -74,6 +77,7 @@
   box-shadow: 0px 10px 30px 0px rgba(133, 143, 164, 0.1);
   border-radius: 4px;
   overflow-y: auto;
+  overflow-x: auto;
   margin-left: 5px;
   margin-right: 5px;
   -webkit-animation-name: animatetop;
@@ -81,9 +85,25 @@
   animation-name: animatetop;
   animation-duration: 0.4s;
   //max-width: 576px;
-  @include adaptiv-value("width",575, 300, 0);
+  //@include adaptiv-value("width",575, 300, 0);
   text-align: center;
   color: $secondary-color;
+  scrollbar-width: thin;
+  scrollbar-color: #FFCA56 #000000;
+  &::-webkit-scrollbar {
+    width: 5px; /* Ширина всего элемента навигации */
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #948686; /* Цвет дорожки */
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #3d3d3d; /* Цвет бегунка */
+    border-radius: 20px; /* Округление бегунка */
+    border: 3px solid #050c26; /* Оформление границ бегунка */
+  }
+  
 }
 
 @-webkit-keyframes animatetop {
@@ -217,7 +237,7 @@
 }
 
 .tabs__panel {
-  display: none;
+ // display: none;
   &-text {
     margin-top: 20px;
     @include adaptiv-value("margin-bottom",40, 20, 0);
@@ -243,4 +263,93 @@
     display: none;
   }
 }
+}
+
+
+.modal__section{
+  max-width: 490px;
+  h4{
+    @include adaptiv-value("font-size", 18, 16, 0);
+    margin-bottom: 20px
+  }
+  h3{
+    @include adaptiv-value("font-size", 22, 14, 0);
+      margin-bottom: 10px;
+  }
+  p{
+    margin-top: 20px;
+    @include adaptiv-value("margin-bottom",40, 20, 0);
+    @include adaptiv-value("font-size",20, 14, 0);
+    text-align: left;
+  
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+.modal-display{
+  .call-button svg{
+    @include adaptiv-value("width",50, 30, 0);
+    @include adaptiv-value("height",50, 30, 0);
+  }
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  width: 100%;
+}
+.modal-choice{
+.modal__content{
+position: initial;
+  //max-width: 1050px;
+}
+}
+.tabs__panel-img{
+  height: 188px;
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+margin: 10px;
+img{
+  max-height: 100%;
+max-width: 100%;
+object-fit: contain;
+}
+}
+
+
+
+.modal__content.one-section {
+  //width: 400px;
+  @include adaptiv-value("width",650,300 , 0);
+
+  }
+  .modal__content.two-sections {
+  @include adaptiv-value("width",1050,300 , 0);
+  }
+  .tabs .tabs__tab-list {
+    display: none;
+}
+
+/* Показываем табы только на мобильных устройствах */
+@media (max-width: 768px) {
+  .tabs__panel-img{
+height: auto;
+  }
+  .modal-display{
+    flex-direction: column;
+  //@include adaptiv-value("width", 600, 450, 0);
+  width: auto;
+  }
+  .tabs .tabs__trigger2 {
+    //width: 70%;
+    margin: auto;
+  }
+    .tabs .tabs__tab-list {
+        display: flex; /* Или другой подходящий стиль */
+        flex-direction: column; /* Расположение табов в столбик */
+    }
 }

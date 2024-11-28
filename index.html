@@ -440,7 +440,9 @@
       <a data-modal="#modal-choice" data-section="section20" class="clickable-area section20"></a>
 
       <a data-modal="#modal-choice" data-section="section21" class="clickable-area section21"></a>
-      </div>
+      <a data-modal="#modal-choice" data-section="section22" class="clickable-area section22"></a> 
+      <a data-modal="#modal-choice" data-section="section23" class="clickable-area section23"></a> 
+    </div>
 
 
 <div class="choice__text d-block">
@@ -834,7 +836,7 @@
             </svg></span>
           <p>Аметьево <strong>2,65 км</strong></p>
           </div></div>
-          <div class="buttons">
+          <!-- <div class="buttons">
             <button class="call-button btn-notbg">Как добраться</button>
             <button class="btn call-button">
               <span>Об организации</span>
@@ -857,7 +859,7 @@
                 />
               </svg>
             </button>
-          </div>
+          </div> -->
         </div>
         <div class="tour-block">
           <span class="tour-title">3D тур</span>
@@ -990,7 +992,7 @@
       <div class="swiper-wrapper"  id="lg-swipper">
  
             <div class="swiper-slide"><img src="img/shopping.jpg"/></div>
-            <div class="swiper-slide"><img src="img/step-img.jpg"/></div>
+         
             <div class="swiper-slide"><img src="img/transport.jpg"/></div>
             <div class="swiper-slide"><img src="img/metro.jpg"/></div>
           
@@ -1177,21 +1179,96 @@
 <!-- МОДАЛЬНОЕ ОКНО С КВАРТИРОЙ  передается  в кнопку через data-modal="modal-choice" -->
 <div class="modal modal-choice hide" id="modal-choice">
   <div class="modal__dialog">
-    <div class="modal__content">
+    <div class="modal__content tabs">
       <div class="modal__close" data-close>&times;</div>
+      <ul class="tabs__tab-list">
+        <li class="js-tab-trigger tabs__trigger2 is-selected" id="without-terrace">Без террасы</li>
+        <li class="js-tab-trigger tabs__trigger2" id="with-terrace">С террасой</li>
+      </ul>
+      <div class="modal-display ">
+     
+      <div class="modal__section tab-content" id="without-terrace-section">
+        <h4 >Без терассы</h4>
+        <div class="tabs__panel-img">
+        <img id="without-terrace-image"  alt="Фото квартиры без террасы" />
+       </div>
+        <div class="modal__section-text ">
+        <h3 id="without-terrace-title"  ></h3>
+        <p id="without-terrace-description" class="" ></p>
+        <button class="btn call-button" data-modal="#modal-form">
+          <span>Узнать цену</span>
+          <svg
+            width="55"
+            height="55"
+            viewBox="0 0 55 55"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="27.5088"
+              cy="27.0741"
+              r="26.9712"
+              fill="#FFCA56"
+            />
+            <path
+              d="M36.2213 27.7812C36.6118 27.3907 36.6118 26.7575 36.2213 26.367L29.8573 20.003C29.4668 19.6125 28.8336 19.6125 28.4431 20.003C28.0526 20.3936 28.0526 21.0267 28.4431 21.4172L34.0999 27.0741L28.4431 32.731C28.0526 33.1215 28.0526 33.7546 28.4431 34.1452C28.8336 34.5357 29.4668 34.5357 29.8573 34.1452L36.2213 27.7812ZM19.5034 28.0741H35.5142V26.0741H19.5034V28.0741Z"
+              fill="#191816"
+            />
+          </svg>
+        </button>
+        </div>
+        </div>
 
+        <div class="modal__section tab-content" id="with-terrace-section">
+          <h4>С терассой</h4>
+          <div class="tabs__panel-img">
+        <img id="with-terrace-image"  src="" alt="Фото квартиры с террасой" />
+          </div>
+        <div class="modal__section-text">
+        <h3 id="with-terrace-title"></h3>
+        <p id="with-terrace-description"></p>
+        <button class="btn call-button" data-modal="#modal-form">
+          <span>Узнать цену</span>
+          <svg
+            width="55"
+            height="55"
+            viewBox="0 0 55 55"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="27.5088"
+              cy="27.0741"
+              r="26.9712"
+              fill="#FFCA56"
+            />
+            <path
+              d="M36.2213 27.7812C36.6118 27.3907 36.6118 26.7575 36.2213 26.367L29.8573 20.003C29.4668 19.6125 28.8336 19.6125 28.4431 20.003C28.0526 20.3936 28.0526 21.0267 28.4431 21.4172L34.0999 27.0741L28.4431 32.731C28.0526 33.1215 28.0526 33.7546 28.4431 34.1452C28.8336 34.5357 29.4668 34.5357 29.8573 34.1452L36.2213 27.7812ZM19.5034 28.0741H35.5142V26.0741H19.5034V28.0741Z"
+              fill="#191816"
+            />
+          </svg>
+        </button>
+        </div>
       <!-- Вкладки -->
-      <div class="tabs js-tabs">
-        <ul class="tabs__tab-list">
+
+
+
+      
+      <!-- <div class="tabs js-tabs"> -->
+        <!-- <ul class="tabs__tab-list">
           <li class="js-tab-trigger tabs__trigger2 is-selected" id="without-terrace">Без террасы</li>
           <li class="js-tab-trigger tabs__trigger2" id="with-terrace">С террасой</li>
-        </ul>
+        </ul> -->
 
         <!-- Панели для контента -->
-        <section id="section1" role="tabpanel" class="tabs__panel js-tab-panel">
-          <img id="modal-image" src="" alt="Фото квартиры" />
+      
+   
+   
+        <!-- <section id="section1" role="tabpanel" class="tabs__panel js-tab-panel">
+          <img id="modal-image" class="tabs__panel-img" src="" alt="Фото квартиры" />
           <div class="tabs__panel-text">
-            <h3 id="modal-title"></h3>
+            <h3 id="modal-title"
+            ></h3>
             <p id="modal-description"></p>
           </div>
           <button class="btn call-button" data-modal="#modal-form">
@@ -1215,10 +1292,14 @@
               />
             </svg>
           </button>
-        </section>
-      </div>
+        </section> -->
+
+     
+      <!-- </div> -->
     </div>
+      </div>
   </div>
+</div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
