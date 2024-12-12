@@ -123,29 +123,110 @@ for (let smoothLink of smoothLinks) {
     });
 
 
-// Ход работы
 
+
+
+
+
+
+
+
+// Ход работы
 const SliderTabs = {
-  currentYear: 2024, // Год по умолчанию
+  currentYear: 2024,
+
   slidesData: {
     2024: [
-      { image: 'img/building.png', date: 'декабрь 2024' },
-      { image: 'img/building.png', date: 'ноябрь 2024' },
-      { image: 'img/building.png', date: 'сентябрь 2024' },
-      { image: 'img/building.png', date: 'октябрь 2024' },
-      { image: 'img/building.png', date: 'февраль 2024' },
-      // Другие данные для 2023 года
+      {
+        images: [
+          'img/объекты/03.07.2024г/1.jpeg ',
+           'img/объекты/03.07.2024г/2.jpeg',
+           'img/объекты/03.07.2024г/3.jpeg',
+          'img/объекты/03.07.2024г/4.jpeg',
+          'img/объекты/03.07.2024г/5.jpeg',
+          'img/объекты/03.07.2024г/6.jpeg',
+          'img/объекты/03.07.2024г/7.jpeg',
+         
+        ],
+        date: 'июль 2024'
+      },
+  
+      {
+        images: [
+          'img/объекты/05.08.2024г/1.jpeg',
+           'img/объекты/05.08.2024г/2.jpeg',
+           'img/объекты/05.08.2024г/3.jpeg',
+          'img/объекты/05.08.2024г/4.jpeg',
+          'img/объекты/05.08.2024г/5.jpeg',
+          'img/объекты/05.08.2024г/6.jpeg',
+          'img/объекты/05.08.2024г/7.jpeg',
+          'img/объекты/05.08.2024г/8.jpeg',
+          'img/объекты/05.08.2024г/9.jpeg',
+          'img/объекты/05.08.2024г/10.jpeg',
+          'img/объекты/05.08.2024г/11.jpg',
+        ],
+        date: 'август 2024'
+      },
+  
+      {
+        images: [
+          'img/объекты/03.09.2024г/1.jpeg',
+           'img/объекты/03.09.2024г/2.jpeg',
+           'img/объекты/03.09.2024г/3.jpeg',
+          'img/объекты/03.09.2024г/4.jpeg',
+          'img/объекты/03.09.2024г/5.jpeg',
+          'img/объекты/03.09.2024г/6.jpeg',
+          'img/объекты/03.09.2024г/7.jpeg',
+          'img/объекты/03.09.2024г/8.jpeg',
+     
+        ],
+        date: 'сентябрь 2024'
+      },
+  
+  
+      {
+        images: [
+          'img/объекты/01.10.2024г/1.jpeg',
+           'img/объекты/01.10.2024г/2.jpeg',
+           'img/объекты/01.10.2024г/3.jpeg',
+          'img/объекты/01.10.2024г/4.jpeg',
+          'img/объекты/01.10.2024г/5.jpeg',
+          'img/объекты/01.10.2024г/6.jpeg',
+          'img/объекты/01.10.2024г/7.jpeg',
+          'img/объекты/01.10.2024г/8.jpeg',
+        ],
+        date: 'октябрь 2024'
+      },
+  
+      {
+        images: [
+          'img/объекты/02.12.2024г/1.jpeg',
+           'img/объекты/02.12.2024г/2.jpeg',
+           'img/объекты/02.12.2024г/3.jpeg',
+          'img/объекты/02.12.2024г/4.jpeg',
+          'img/объекты/02.12.2024г/5.jpeg',
+          'img/объекты/02.12.2024г/6.jpeg',
+      
+        ],
+        date: 'декабрь 2024'
+      },
+  
+    
     ],
     2025: [
-      { image: 'img/building.png', date: 'март 2025' },
-
-
-      // Другие данные для 2024 года
-    ],
-    2027: [
-      { image: 'img/building.png', date: 'январь 2027' },
-      { image: 'img/building.png', date: 'февраль 2027' },
-      // Другие данные для 2025 года
+      {
+        images: [
+          'img/объекты/02.12.2024г/1.jpeg',
+           'img/объекты/02.12.2024г/2.jpeg',
+           'img/объекты/02.12.2024г/3.jpeg',
+          'img/объекты/02.12.2024г/4.jpeg',
+          'img/объекты/02.12.2024г/5.jpeg',
+          'img/объекты/02.12.2024г/6.jpeg',
+      
+        ],
+        date: 'декабрь 2024'
+      },
+  
     ],
   },
 
@@ -162,91 +243,131 @@ const SliderTabs = {
   },
 
   bindEvents() {
-    this.tabButtons.forEach(button =>
+    this.tabButtons.forEach((button) =>
       button.addEventListener('click', (e) => this.onTabClick(e))
     );
   },
 
   onTabClick(e) {
-    const selectedYear = parseInt(e.target.getAttribute('data-year'));
+    const selectedYear = parseInt(e.target.getAttribute('data-year'), 10);
     if (this.currentYear !== selectedYear) {
       this.currentYear = selectedYear;
       this.updateActiveTab();
       this.loadSlides(this.currentYear);
-      this.swiper2.update(); // Обновление Swiper после изменения слайдов
+      this.swiper2.update(); // Обновляем Swiper после смены таба
     }
   },
 
   updateActiveTab() {
-    this.tabButtons.forEach(button =>
-      button.classList.toggle('active', parseInt(button.getAttribute('data-year')) === this.currentYear)
+    this.tabButtons.forEach((button) =>
+      button.classList.toggle(
+        'active',
+        parseInt(button.getAttribute('data-year'), 10) === this.currentYear
+      )
     );
   },
 
   loadSlides(year) {
-    this.sliderWrapper.innerHTML = ''; 
-    this.slidesData[year].forEach(slide => {
-      const slideElement = document.createElement('div');
-      slideElement.classList.add('swiper-slide');
-      slideElement.innerHTML = `
+    this.sliderWrapper.innerHTML = ''; // Очистить старые слайды
 
-        <div class="step__item">
-          <div class="step__img">
-            <img src="${slide.image}" alt="${slide.date}">
-            <div class="step__content">
-              <h3>${slide.date}</h3>
+    this.slidesData[year].forEach((slide, index) => {
+      const slideElement = document.createElement('div');
+      slideElement.classList.add('swiper-slide', 'step__item'); // Добавляем класс step__item для плавного появления
+
+      const uniqueID = `inner-swiper-${year}-${index}`;
+
+      const innerSlides = slide.images
+        .map(
+          (image) => `
+            <div class="swiper-slide">
+              <img 
+                src="${image}" 
+                alt="${slide.date}" 
+                style="width: 100%; height: 100%; object-fit: cover;">
             </div>
+          `
+        )
+        .join('');
+        console.log(`Генерация слайда для ${year}, индекс: ${index}`);
+
+      slideElement.innerHTML = `
+        <div class="step__img swiper-container ${uniqueID}">
+          <div class="swiper-wrapper">
+            ${innerSlides}
           </div>
-        </div>`;
+          <div class="swiper-button-prev ${uniqueID}-prev"></div>
+          <div class="swiper-button-next ${uniqueID}-next"></div>
+        </div>
+        <div class="step__content">
+          <h3>${slide.date}</h3>
+        </div>
+      `;
+
       this.sliderWrapper.appendChild(slideElement);
+
+      // Добавляем класс .visible с небольшой задержкой, чтобы запустить анимацию
+      setTimeout(() => {
+        slideElement.classList.add('visible');
+      }, 50); // Задержка перед добавлением класса для плавного появления
+
+      // Инициализация внутреннего Swiper
+      const innerSwiper = new Swiper(`.${uniqueID}`, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        allowTouchMove:false,
+        mousewheel: false,
+        loop:true,
+        navigation: {
+          nextEl: `.${uniqueID}-next`,
+          prevEl: `.${uniqueID}-prev`,
+        },
+      });
+
+      // Принудительное обновление размеров
+      setTimeout(() => innerSwiper.update(), 0);
     });
+
+    // Принудительное обновление основного слайдера
+    setTimeout(() => {
+      if (this.swiper2) this.swiper2.update();
+    }, 0);
   },
 
   initSwiper() {
+    // Основной Swiper
     this.swiper2 = new Swiper('.swiper2', {
       slidesPerView: 4,
       spaceBetween: 20,
-      loop: true,
-      dots:true,
-    
+      loop: false,
       pagination: {
-            el: '.swiper-pagination2',
-            clickable: true,
-          },
-          // Navigation arrows
-          navigation: {
-            nextEl: '.swiper-button-next2',
-            prevEl: '.swiper-button-prev2',
-            clickable: true
-          },
-        
-          breakpoints: {
-            // when window width is >= 320px
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 20
-            },
-            // when window width is >= 480px
-            480: {
-              slidesPerView: 2,
-              spaceBetween: 20
-            },
-            // when window width is >= 640px
-            640: {
-              slidesPerView: 3,
-              spaceBetween: 20
-            },
-           990: {
-              slidesPerView: 4,
-              spaceBetween: 20
-            }
-          }
+        el: '.swiper-pagination2',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next2',
+        prevEl: '.swiper-button-prev2',
+      },
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 20 },
+        480: { slidesPerView: 2, spaceBetween: 20 },
+        640: { slidesPerView: 3, spaceBetween: 20 },
+        990: { slidesPerView: 4, spaceBetween: 20 },
+      },
     });
-  },
-};
+  }
+    
 
-// Инициализация объекта
+};
+    
+
 SliderTabs.init();
+
+
+
+
+
+
+
 
 // Получаем элементы бургер-меню и навигации
 const burger = document.getElementById('burger');
@@ -416,7 +537,7 @@ navLinks.forEach(link => {
           description: `
       <ul>
         <li>- Общая площадь: 36,43 м²</li>
-        <li>- Жилая площадь: 12,02 кв.м,</li>
+        <li>- Жилая площадь: 11,36 кв.м,</li>
         <li>- Площадь кухни: 11,38 кв.м,</li>
             <li>- Площадь комната: 11,36 кв.м. </li>
               <li>Вид: на парк </li>
@@ -429,7 +550,7 @@ navLinks.forEach(link => {
           description: `
       <ul>
         <li>- Общая площадь: 39,57 м²</li>
-        <li>- Жилая площадь: 11,36 кв.м,</li>
+        <li>- Жилая площадь: 12,02 кв.м,</li>
         <li>- Площадь кухни: 11,38 кв.м,</li>
             <li>- Площадь комната: 11,36 кв.м. </li>
               <li>Вид: на парк </li>
@@ -481,10 +602,10 @@ navLinks.forEach(link => {
           title: "Однокомнатная квартира",
           description: `
      <ul>
-        <li>- Общая площадь: 40,47 м²</li>
-        <li>- Жилая площадь: 14,04 кв.м,</li>
-        <li>- Площадь кухни: 11,6 кв.м,</li>
-            <li>- Площадь комната: 14,04 кв.м. </li>
+        <li>- Общая площадь: 30,70 м²</li>
+        <li>- Жилая площадь: 10,52 кв.м,</li>
+        <li>- Площадь кухни: 9,40 кв.м,</li>
+            <li>- Площадь комната: 10,52 кв.м. </li>
               <li>Вид: во двор и на парк </li>
       </ul>
     `,
@@ -494,12 +615,12 @@ navLinks.forEach(link => {
           title: "Однокомнатная квартира с террасой",
           description: `
           <ul>
-            <li>- Общая площадь: 41,59 м²</li>
-            <li>- Жилая площадь: 14,04 кв.м,</li>
-            <li>- Площадь кухни: 11,6 кв.м,</li>
-              <li>- Площадь комнаты: 14,04 кв.м,</li>
-                  <li>Вид: во двор и на парк </li>
-          </ul>
+          <li>- Общая площадь: 33,68 м²</li>
+        <li>- Жилая площадь: 10,52 кв.м,</li>
+        <li>- Площадь кухни: 9,40 кв.м,</li>
+            <li>- Площадь комната: 10,52 кв.м. </li>
+              <li>Вид: во двор и на парк </li>
+      </ul>
         `,
         },
       },
@@ -577,9 +698,9 @@ navLinks.forEach(link => {
       <ul>
         <li>- Общая площадь: 54,11 м²</li>
         <li>- Жилая площадь: 23,17 кв.м,</li>
-        <li>- Площадь кухни: 12,01 кв.м,</li>
-       
-            <li>- Площадь комнаты: 23,17 кв.м. </li>
+        <li>- Площадь кухни: 11,79 кв.м,</li>
+            <li>- Площадь комнаты 1: 11,16 кв.м. </li>
+             <li>- Площадь комнаты 2: 12,01 кв.м. </li>
               <li>Вид: на парк
  </li>
       </ul>
@@ -592,9 +713,9 @@ navLinks.forEach(link => {
           <ul>
             <li>- Общая площадь: 58,78 м²</li>
             <li>- Жилая площадь: 23,17 кв.м,</li>
-        <li>- Площадь кухни: 12,01 кв.м,</li>
-       
-            <li>- Площадь комнаты: 23,17 кв.м. </li>
+        <li>- Площадь кухни: 11,79 кв.м,</li>
+         <li>- Площадь комнаты 1: 11,16 кв.м. </li>
+             <li>- Площадь комнаты 2: 12,01 кв.м. </li>
                   <li>Вид: на парк
  </li>
           </ul>
@@ -697,7 +818,7 @@ navLinks.forEach(link => {
           title: "Однокомнатная квартира",
           description: `
       <ul>
-        <li>- Общая площадь: 32,82 м²</li>
+        <li>- Общая площадь: 32,87 м²</li>
         <li>- Жилая площадь: 11,32 кв.м,</li>
         <li>- Площадь кухни: 11,21 кв.м,</li>
        
@@ -773,7 +894,7 @@ navLinks.forEach(link => {
         },
        
       },
-      //сделано
+
       section18: {
         withoutTerrace: {
           img: "img/sec18(37,6).jpg",
@@ -809,7 +930,6 @@ navLinks.forEach(link => {
    
       },
 
-  //сделано
       section20: {
         withoutTerrace: {
           img: "img/sec20(1п36,4).jpg",
@@ -828,7 +948,6 @@ navLinks.forEach(link => {
      
       },
 
-      //сделано
       section21: {
         withoutTerrace: {
           img: "img/sec21(1п35,49).jpg",
@@ -846,8 +965,7 @@ navLinks.forEach(link => {
         },
        
       },
- 
-      //нету описания только размер
+
       section22: {
         withoutTerrace: {
           img: "img/sec22(1п33,4).jpg",
@@ -865,7 +983,7 @@ navLinks.forEach(link => {
       
       },
 
-//сделано
+
       section23: {
         withoutTerrace: {
           img: "img/sec23(2п64,32).jpg",

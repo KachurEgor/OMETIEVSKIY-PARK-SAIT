@@ -14,7 +14,7 @@
       }
     }
     .swip-nav{
-      padding-top: 20px;
+      padding-top: 50px;
       display: flex;
       justify-content: center;
       align-items:center ;
@@ -22,7 +22,8 @@
   
   h3{
     font-weight: 600;
-    font-size: 18px;
+
+    @include adaptiv-value("font-size", 18, 16, 0);
     color: $secondary-color;
   }
   // .step__items
@@ -66,35 +67,79 @@
 
 
 .swiper2 {
-  margin-bottom: 23px;
+ // margin-bottom: 23px;
   overflow: hidden;
+
   padding-bottom: 5px;
 
 .swiper-wrapper{
-  margin-bottom: 23px;
+ // margin-bottom: 23px;
 }
 .swiper-container {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+ 
+  // padding-top: 50px;
+  // padding-bottom: 50px;
+}
+
+/* Стили для плавного появления */
+.step__item {
+
+  overflow: hidden;
+  position: relative;
+  opacity: 0; /* Слайд скрыт по умолчанию */
+  visibility: hidden; /* Слайд скрыт */
+  transition: opacity 0.5s ease-in-out; /* Плавный переход */
+}
+
+.step__item.visible {
+  opacity: 1; /* Делает слайд видимым */
+  visibility: visible; /* Показывает слайд */
+}
+
+/* Слайдеры с фиксированными размерами */
+.step__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Слайды */
+.swiper-slide {
+  //width: 100%; /* Подгонка под ширину контейнера */
+  height: 100%; /* Подгонка под высоту контейнера */
+  overflow: hidden; /* Убедиться, что ничего не выходит за пределы */
+}
+
+/* Изображения */
+.swiper-slide img {
+ // width: 100%; /* Растягивание по ширине */
+  height: 100%; /* Растягивание по высоте */
+  object-fit: cover; /* Убедиться, что изображение вписывается */
+  
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-
+//width: 380px;
 }
 
 .swiper-slide img {
   display: block;
   border-top-left-radius: 150px;
   @include adaptiv-value("border-top-left-radius", 60, 0, 0);
-  //height: 230px;
+ //height: 255px;
   margin: auto;
-  width: 100%;
+ width: 100%;
+  
 }
+
 .step__content{
   bottom: 0;
+  z-index: 999;
+  left: 0;
 }
 }
 
@@ -237,3 +282,67 @@ cursor: pointer;
     }
   }
   }
+
+  .step__item {
+    position: relative;
+    overflow: hidden; /* Это предотвращает выход содержимого за пределы .step__item */
+
+    
+
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,.swiper-button-prev:after{
+      width: 2px;
+      height: 2px;
+      font-size: 12px;
+      padding: 15px;
+    }
+  }
+
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,.swiper-button-prev:after {
+
+    color: #191816;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 20px;
+    /* padding-top: 15px; */
+    top: 45%;
+    left: 50%;
+    /* content: ''; */
+    /* display: block; */
+    width: 5px;
+    height: 5px;
+    /* border-left: 3px solid gray; */
+    /* border-bottom: 3px solid gray; */
+    border-radius: 90%;
+    margin: auto;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* flex-direction: column; */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #FFCA56;
+    cursor: pointer;
+  }
+
+
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.3s ease;
+  }
+  
+  // .swiper-slide {
+  //   flex: 0 0 auto;
+  
+  //   overflow:hidden
+  // }
+  .swiper-slide {
+    flex: 0 0 auto; /* Убедитесь, что ширина задается динамически */
+  }
+
+  .step__item {
+    width: calc((100% - 3 * 20px) / 4); /* 4 слайда в ряд с учетом отступов */
+  }
+  

@@ -242,6 +242,9 @@
 }
 
 @media screen and (max-width: 470px) {
+  .step h3 {
+   text-align: center;
+}
   .choice__text {
     //@include adaptiv-value("width", 700, 300, 0);
     //right: -91%;
