@@ -1947,8 +1947,19 @@ template {
   position: absolute;
   bottom: 3px;
   background-color: #FFCA56;
-  border-radius: 0 150px 0 0;
+  border-radius: 150px 0 0 0;
   width: 90%;
+  text-align: center;
+}
+
+.step__item.visible {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.swiper-slide {
+  will-change: transform;
 }
 
 .swiper2 {
@@ -2008,7 +2019,7 @@ template {
 .swiper2 .step__content {
   bottom: 0;
   z-index: 999;
-  left: 0;
+  right: 0;
 }
 
 .swiper-pagination2 {

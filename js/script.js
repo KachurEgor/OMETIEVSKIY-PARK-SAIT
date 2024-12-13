@@ -122,15 +122,6 @@ for (let smoothLink of smoothLinks) {
       }
     });
 
-
-
-
-
-
-
-
-
-
 // Ход работы
 const SliderTabs = {
   currentYear: 2024,
@@ -314,7 +305,7 @@ const SliderTabs = {
       const innerSwiper = new Swiper(`.${uniqueID}`, {
         slidesPerView: 1,
         spaceBetween: 10,
-        allowTouchMove:false,
+       // allowTouchMove:false,
         mousewheel: false,
         loop:true,
         navigation: {
